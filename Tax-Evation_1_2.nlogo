@@ -5,10 +5,6 @@ globals [max-pop-size  global-audit-perc-eff PIAR_10000 PRA_10000 acum_frauds_de
   acum_prom_PIAR_ags
   acum_prom_RA_ags
   acum_delta_inc_real_inc_report
-
-  ;variables para memoria institucional
-  institutional-memory
-  audit-noise
 ]
 breed [tax-payers tax-payer]
 breed [auditors auditor]
@@ -284,7 +280,7 @@ to make-audit
       let total-penalty 0  ; acumular penalidades de todos los períodos
       let detected-any-fraud false
       let num-periods-to-audit min list institutional-memory (length [income-history] of x + 1)
-      
+
       ; loop sobre cada período dentro de la ventana de memoria institucional
       let period-offset 0
       repeat num-periods-to-audit
@@ -295,7 +291,7 @@ to make-audit
           ; aplicar ruido histórico a la eficiencia
           let noise-reduction calculate-historical-noise period-offset
           let effective-efficiency ([pct-audit-efficiency] of self) * nr-audits-done * (1 - noise-reduction)
-          
+
           ; verificar detección con ruido
           if effective-efficiency > random-float 1
           [
@@ -303,7 +299,7 @@ to make-audit
             let historical-data [get-income-history-entry period-offset] of x
             let hist-income item 0 historical-data
             let hist-income-reported item 1 historical-data
-            
+
             ; verificar si hay fraude en este período
             if hist-income-reported < hist-income
             [
@@ -315,15 +311,15 @@ to make-audit
             ]
           ]
         ]
-        
+
         ; fatiga aumenta: 5% por cada período auditar (comentario: quizás revisarse)
         set nr-audits-done nr-audits-done - 0.05
         set period-offset period-offset + 1
       ]
-      
+
       ; aplicar penalidad acumulada al período actual
       ask x [
-        if detected-any-fraud
+        ifelse detected-any-fraud
         [
           let inc-w-penalty ( (1 - tax-rate) * income - total-penalty )
           set after-tax-income ifelse-value inc-w-penalty < 0 [0] [inc-w-penalty]
@@ -338,16 +334,16 @@ to make-audit
           set after-tax-income income - tax-rate * income-reported
           set fraud-detect-hist sliding-window fraud-detect-hist 0
         ]
-        
+
         ; marcar todos los períodos que fueron auditados
-        let period-offset 0
+        let p-offset 0
         repeat min list institutional-memory (length income-history + 1)
         [
-          add-period-to-audited period-offset
-          set period-offset period-offset + 1
+          add-period-to-audited p-offset
+          set p-offset p-offset + 1
         ]
       ]
-      
+
       ; contar fraude perpetrado (si hay subreporte en período actual)
       if [income-reported] of x < [income] of x and ticks >= 25000 [set acum_frauds_perpretated acum_frauds_perpretated + 1]
     ]
@@ -543,7 +539,6 @@ to-report calculate-historical-noise [period-offset]
   let noise-factor audit-noise * period-offset
   report noise-factor
 end
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 286
@@ -807,9 +802,9 @@ HORIZONTAL
 
 SLIDER
 40
-201
+450
 229
-234
+483
 institutional-memory
 institutional-memory
 1
@@ -822,9 +817,9 @@ HORIZONTAL
 
 SLIDER
 40
-238
+485
 229
-271
+518
 audit-noise
 audit-noise
 0
@@ -1260,6 +1255,53 @@ NetLogo 6.4.0
       <value value="&quot;strategic&quot;"/>
       <value value="&quot;random&quot;"/>
       <value value="&quot;income-level&quot;"/>
+    </enumeratedValueSet>
+  </experiment>
+  <experiment name="Exper_emu_paper" repetitions="1" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <timeLimit steps="5000"/>
+    <metric>mean [pct-income-report] of tax-payers</metric>
+    <metric>mean [risk-aversion] of tax-payers</metric>
+    <metric>PIAR_10000</metric>
+    <metric>PRA_10000</metric>
+    <metric>acum_frauds_detected</metric>
+    <metric>acum_frauds_perpretated</metric>
+    <metric>acum_frauds_perpretated_all_ags</metric>
+    <metric>SS_PIAR</metric>
+    <metric>SS_RA</metric>
+    <enumeratedValueSet variable="nr-tax-payers">
+      <value value="500"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nr-auditors">
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="actual-audit-rate">
+      <value value="0.2"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="tax-rate">
+      <value value="0.27"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="penalty-rate">
+      <value value="1.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="learning-rate">
+      <value value="0.05"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-Risk-aversion">
+      <value value="0.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="treshold-influence-income">
+      <value value="1.65"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="tax-payer-audit-selection">
+      <value value="&quot;random&quot;"/>
+      <value value="&quot;income-level&quot;"/>
+      <value value="&quot;strategic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="period-frauds">
+      <value value="1"/>
+      <value value="5"/>
     </enumeratedValueSet>
   </experiment>
 </experiments>
