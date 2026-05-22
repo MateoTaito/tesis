@@ -1257,10 +1257,10 @@ NetLogo 6.4.0
       <value value="&quot;income-level&quot;"/>
     </enumeratedValueSet>
   </experiment>
-  <experiment name="Exper_emu_paper" repetitions="1" runMetricsEveryStep="false">
+  <experiment name="Exper_emu_paper" repetitions="3" runMetricsEveryStep="false">
     <setup>setup</setup>
     <go>go</go>
-    <timeLimit steps="5000"/>
+    <timeLimit steps="10000"/>
     <metric>mean [pct-income-report] of tax-payers</metric>
     <metric>mean [risk-aversion] of tax-payers</metric>
     <metric>PIAR_10000</metric>

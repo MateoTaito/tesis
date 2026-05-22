@@ -1,0 +1,121 @@
+================================================================================
+INTERACTION ANALYSIS - MEAN RISK AVERSION BY STRATEGY & PERIOD FRAUDS
+================================================================================
+Generated: 2026-05-19 13:44
+
+EXPERIMENT: Exper_emu_paper
+- Repetitions: 6 runs
+- Strategies: income-level, random, strategic (3 levels)
+- Social Memory: period-frauds = 1 or 5 (2 levels)
+- Total combinations: 3 × 2 = 6 scenarios
+
+================================================================================
+SUMMARY STATISTICS
+================================================================================
+
+Period Frauds Level: 1 (LOW Social Memory)
+  income-level:    0.3932
+  random:          0.3926
+  strategic:       0.3944
+  
+Period Frauds Level: 5 (HIGH Social Memory)
+  income-level:    0.3951 (+0.19% vs Period=1)
+  random:          0.3932 (+0.15% vs Period=1)
+  strategic:       0.3921 (-0.58% vs Period=1)
+
+================================================================================
+KEY FINDINGS
+================================================================================
+
+1. OVERALL TREND:
+   - Mean Risk Aversion is relatively stable across conditions (~0.393)
+   - Differences between conditions are small (< 0.6% variation)
+
+2. STRATEGY DIFFERENCES (at Period Frauds = 1):
+   - strategic leads: 0.3944 (highest)
+   - income-level:    0.3932 (middle)
+   - random:          0.3926 (lowest)
+   - Range: 0.18%
+
+3. MEMORY EFFECT BY STRATEGY:
+   - income-level: INCREASES with higher memory (+0.19%)
+   - random:       INCREASES with higher memory (+0.15%)
+   - strategic:    DECREASES with higher memory (-0.58%)
+
+4. INTERACTION PATTERN:
+   - All three strategies show different responses to increased social memory
+   - Strategic strategy is most sensitive (largest change magnitude)
+   - This suggests an INTERACTION effect between strategy and memory level
+
+================================================================================
+VISUALIZATIONS
+================================================================================
+
+Generated 4 high-resolution PNG files (300 dpi):
+
+1. interaction_plot_line.png
+   - Best for: Seeing trends and crossing lines
+   - Shows: How each strategy changes with period-frauds
+
+2. interaction_plot_grouped_bars.png
+   - Best for: Comparing strategies within each memory level
+   - Shows: Side-by-side comparison by period-frauds
+
+3. interaction_plot_heatmap.png
+   - Best for: Quick visual pattern recognition
+   - Shows: Color-coded intensities for all combinations
+
+4. interaction_plot_faceted.png
+   - Best for: Examining strategy differences within memory levels
+   - Shows: Separate panels for each period-frauds value
+
+Plus: summary_mean_risk_aversion.csv for numerical analysis
+
+================================================================================
+FILES CREATED
+================================================================================
+
+Python Script:
+  ✓ plot_interaction_analysis.py (executable, uses venv)
+
+Visualizations:
+  ✓ interaction_plot_line.png (249 KB)
+  ✓ interaction_plot_grouped_bars.png (140 KB)
+  ✓ interaction_plot_heatmap.png (163 KB)
+  ✓ interaction_plot_faceted.png (143 KB)
+
+Data:
+  ✓ summary_mean_risk_aversion.csv (159 B)
+
+Documentation:
+  ✓ README_interaction_analysis.md (comprehensive guide)
+  ✓ ANALYSIS_SUMMARY.txt (this file)
+
+Virtual Environment:
+  ✓ venv/ (with pandas, matplotlib, seaborn, numpy installed)
+
+================================================================================
+HOW TO RE-RUN
+================================================================================
+
+From the Resultados_experimentos directory:
+
+  $ source venv/bin/activate
+  $ python plot_interaction_analysis.py
+
+This will regenerate all plots and summary statistics from exp_emu_paper.csv
+
+To deactivate the environment:
+  $ deactivate
+
+================================================================================
+NEXT STEPS (RECOMMENDATIONS)
+================================================================================
+
+1. Run more repetitions for more robust statistics
+2. Add institutional-memory (15 periods) × audit-noise (0-0.5) parameters
+3. Increase sample size to better detect small effect sizes
+4. Consider statistical significance testing (ANOVA for interaction)
+5. Extend experiment duration to reach steady state if not already achieved
+
+================================================================================
