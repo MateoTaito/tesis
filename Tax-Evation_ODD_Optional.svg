@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="834px" height="673px" viewBox="0 0 834 673" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="background: #FFFFFF;">
+    <title>ODD Overview – Tax-Evation con Memoria Institucional</title>
+    <defs>
+        <rect id="path-1" x="10" y="92" width="202" height="98" rx="8"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="202" height="98" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="10" y="206" width="202" height="98" rx="8"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="202" height="98" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <rect id="path-5" x="621" y="92" width="202" height="98" rx="8"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="202" height="98" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <rect id="path-7" x="621" y="206" width="202" height="98" rx="8"></rect>
+        <mask id="mask-8" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="202" height="98" fill="white">
+            <use xlink:href="#path-7"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- BACKGROUND COLUMNS -->
+        <rect id="col-left" fill="#D8D8D8" x="0" y="46" width="222" height="379"></rect>
+        <rect id="col-mid" fill="#D8D8D8" x="230" y="46" width="373" height="379"></rect>
+        <rect id="col-right" fill="#D8D8D8" x="611" y="46" width="222" height="379"></rect>
+
+        <!-- ITALIC LABELS: temporal resolution -->
+        <text id="temporal-resolution" font-family="Arial-ItalicMT, Arial" font-size="16" font-style="italic" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="386.046441" y="261.57244">temporal </tspan>
+            <tspan x="382.483941" y="278.57244">resolution</tspan>
+        </text>
+
+        <!-- COLUMN HEADERS -->
+        <rect id="header-left" fill="#6D7278" x="0" y="46" width="222" height="30"></rect>
+        <rect id="header-right" fill="#6D7278" x="611" y="46" width="222" height="30"></rect>
+        <text id="header-init" font-family="Arial-BoldMT, Arial" font-size="20" font-weight="bold" fill="#FFFFFF">
+            <tspan x="58.6601562" y="68">Inicialización</tspan>
+        </text>
+        <rect id="header-mid" fill="#6D7278" x="230" y="46" width="373" height="30"></rect>
+        <text id="header-sub" font-family="Arial-BoldMT, Arial" font-size="20" font-weight="bold" fill="#FFFFFF">
+            <tspan x="356.103516" y="68">Submodelos</tspan>
+        </text>
+        <text id="header-obs" font-family="Arial-BoldMT, Arial" font-size="20" font-weight="bold" fill="#FFFFFF">
+            <tspan x="643.088867" y="68">Observaciones</tspan>
+        </text>
+
+        <!-- DASHED ENTITY / OUTPUT BOXES -->
+        <use id="box-entity-1" stroke="#FFFFFF" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="6,6" xlink:href="#path-1"></use>
+        <use id="box-entity-2" stroke="#FFFFFF" mask="url(#mask-4)" stroke-width="4" stroke-dasharray="6,6" xlink:href="#path-3"></use>
+        <use id="box-output-1" stroke="#FFFFFF" mask="url(#mask-6)" stroke-width="4" stroke-dasharray="6,6" xlink:href="#path-5"></use>
+        <use id="box-output-2" stroke="#FFFFFF" mask="url(#mask-8)" stroke-width="4" stroke-dasharray="6,6" xlink:href="#path-7"></use>
+
+        <!-- ITALIC LABELS: temporal extent / stop condition -->
+        <text id="temporal-extent" font-family="Arial-ItalicMT, Arial" font-size="16" font-style="italic" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="546.585504" y="391.57244">temporal extent / </tspan>
+            <tspan x="556.804254" y="408.57244">stop condition</tspan>
+        </text>
+
+        <!-- ITALIC LABEL: spatial extent & resolution -->
+        <text id="spatial-extent" font-family="Arial-ItalicMT, Arial" font-size="16" font-style="italic" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="18.0620662" y="376.57244">spatial extent &amp; resolution</tspan>
+        </text>
+        <text id="spatial-desc" font-family="ArialMT, Arial" font-size="12" font-weight="normal" fill="#000000">
+            <tspan x="18.0620662" y="396">Grilla de parches</tspan>
+            <tspan x="18.0620662" y="413">Vecindad Moore (8 vecinos)</tspan>
+        </text>
+
+        <!-- ====== ENTITY 1: Contribuyentes ====== -->
+        <text id="entity-1-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#000000" fill-opacity="0.85">
+            <tspan x="24" y="115">Contribuyentes</tspan>
+        </text>
+        <text id="entity-1-vars" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="30.6714412" y="135.57244">pct-income-report</tspan>
+            <tspan x="30.6714412" y="157.57244">risk-aversion</tspan>
+            <tspan x="30.6714412" y="179.57244">income-history</tspan>
+        </text>
+
+        <!-- ====== ENTITY 2: Auditores ====== -->
+        <text id="entity-2-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#000000" fill-opacity="0.85">
+            <tspan x="24" y="232">Auditores</tspan>
+        </text>
+        <text id="entity-2-vars" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="30.6714412" y="249.57244">pct-audit-efficiency</tspan>
+            <tspan x="30.6714412" y="271.57244">selected-txp-audit</tspan>
+        </text>
+
+        <!-- ====== OUTPUT PATTERN 1: Nivel de reporte ====== -->
+        <text id="output-1-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#000000" fill-opacity="0.85">
+            <tspan x="632" y="115">Nivel de reporte</tspan>
+        </text>
+        <text id="output-1-vars" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="632" y="135.57244">PIAR_ticks (media global)</tspan>
+            <tspan x="632" y="157.57244">RA_ticks (media global)</tspan>
+        </text>
+
+        <!-- ====== OUTPUT PATTERN 2: Fraude ====== -->
+        <text id="output-2-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#000000" fill-opacity="0.85">
+            <tspan x="632" y="232">Fraude</tspan>
+        </text>
+        <text id="output-2-vars" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="632" y="249.57244">acum_frauds_detected</tspan>
+            <tspan x="632" y="271.57244">acum_frauds_perpetrated</tspan>
+        </text>
+
+        <!-- ====== SUBMODELS ====== -->
+        <!-- Bottom: main audit process -->
+        <text id="submodel-1" font-family="ArialMT, Arial" font-size="16" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="237" y="327">make-audit</tspan>
+        </text>
+        <text id="submodel-1-desc" font-family="ArialMT, Arial" font-size="11" font-weight="normal" fill="#000000" fill-opacity="0.7">
+            <tspan x="237" y="346">auditoría con memoria institucional:</tspan>
+            <tspan x="237" y="361">revisa hasta N periodos hacia atrás,</tspan>
+            <tspan x="237" y="376">evitando re-auditar periodos previos</tspan>
+        </text>
+
+        <!-- Middle: risk aversion adjustment -->
+        <text id="submodel-2" font-family="ArialMT, Arial" font-size="16" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="237" y="206">txp-adjust-risk-aversion</tspan>
+        </text>
+        <text id="submodel-2-desc" font-family="ArialMT, Arial" font-size="11" font-weight="normal" fill="#000000" fill-opacity="0.7">
+            <tspan x="237" y="226">ajusta aversión al riesgo por</tspan>
+            <tspan x="237" y="241">influencia vecinal (neighbors)</tspan>
+            <tspan x="237" y="256">e historial de sanciones</tspan>
+        </text>
+
+        <!-- Top-left: reporting adjustment -->
+        <text id="submodel-3" font-family="ArialMT, Arial" font-size="16" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="237" y="128">tax-payers-adjust-pct-inc-rep</tspan>
+        </text>
+        <text id="submodel-3-desc" font-family="ArialMT, Arial" font-size="11" font-weight="normal" fill="#000000" fill-opacity="0.7">
+            <tspan x="237" y="148">ajusta pct-income-report según</tspan>
+            <tspan x="237" y="163">auditoría, detección y risk-aversion</tspan>
+        </text>
+
+        <!-- Top-right: efficiency adjustment -->
+        <text id="submodel-4" font-family="ArialMT, Arial" font-size="16" font-weight="normal" fill="#000000" fill-opacity="0.85">
+            <tspan x="400" y="128">auditors-adjust-pct-eff</tspan>
+        </text>
+        <text id="submodel-4-desc" font-family="ArialMT, Arial" font-size="11" font-weight="normal" fill="#000000" fill-opacity="0.7">
+            <tspan x="400" y="148">ajuste periódico de eficiencia</tspan>
+            <tspan x="400" y="163">(cada 100 auditorías)</tspan>
+        </text>
+
+        <!-- ====== TOP BAR: Purpose ====== -->
+        <rect id="top-bar" fill="#EEEEEE" x="0" y="0" width="833" height="39"></rect>
+        <text id="purpose-label" font-family="Arial-BoldMT, Arial" font-size="20" font-weight="bold" fill="#6D7278">
+            <tspan x="12.6601562" y="26">Propósito:</tspan>
+        </text>
+        <text id="purpose-text" font-family="ArialMT, Arial" font-size="16" font-weight="normal" fill="#6D7278">
+            <tspan x="120.6601562" y="26">Simular evasión fiscal con contribuyentes adaptativos y auditores con memoria institucional</tspan>
+        </text>
+
+        <!-- ====== BOTTOM BAR: Scenarios ====== -->
+        <rect id="bottom-bar" fill="#EEEEEE" x="0" y="553" width="833" height="120"></rect>
+        <text id="scenarios-label" font-family="Arial-BoldMT, Arial" font-size="20" font-weight="bold" fill="#6D7278">
+            <tspan x="10.8671875" y="579">Escenarios:</tspan>
+        </text>
+        <text id="scenarios-text" font-family="ArialMT, Arial" font-size="14" font-weight="normal" fill="#6D7278">
+            <tspan x="125.8671875" y="579">institutional-memory [1–15],  audit-noise [0–0.5]</tspan>
+            <tspan x="125.8671875" y="601">tax-rate,  penalty-rate,  actual-audit-rate,  learning-rate</tspan>
+            <tspan x="125.8671875" y="623">initial-Risk-aversion,  max-nr-simulated-steps</tspan>
+            <tspan x="125.8671875" y="645">tax-payer-audit-selection {random, income-level, strategic}</tspan>
+        </text>
+
+        <!-- ====== BOTTOM PATTERNS PANELS ====== -->
+        <rect id="bottom-init" fill="#EEEEEE" x="0" y="435" width="222" height="111"></rect>
+        <rect id="bottom-obs" fill="#EEEEEE" x="611" y="435" width="222" height="111"></rect>
+        <rect id="bottom-sub" fill="#EEEEEE" x="230" y="435" width="373" height="111"></rect>
+
+        <text id="pattern-init-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#6D7278">
+            <tspan x="7.5" y="459">Patrones de inicialización</tspan>
+        </text>
+        <text id="pattern-init-text" font-family="ArialMT, Arial" font-size="12" font-weight="normal" fill="#6D7278">
+            <tspan x="7.5" y="479">income ~ log-normal(16, 7)</tspan>
+            <tspan x="7.5" y="496">pct-income-report ~ U[0, 1)</tspan>
+            <tspan x="7.5" y="513">risk-aversion = valor inicial fijo</tspan>
+            <tspan x="7.5" y="530">income-history = [] (vacío)</tspan>
+        </text>
+
+        <text id="pattern-sub-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#6D7278">
+            <tspan x="242.5" y="459">Patrones de submodelos</tspan>
+        </text>
+        <text id="pattern-sub-text" font-family="ArialMT, Arial" font-size="12" font-weight="normal" fill="#6D7278">
+            <tspan x="242.5" y="479">Por tick: 1. make-audit</tspan>
+            <tspan x="242.5" y="496">2. txp-adjust-risk-aversion</tspan>
+            <tspan x="242.5" y="513">3. tax-payers-adjust-pct-inc-rep</tspan>
+            <tspan x="242.5" y="530">4. guardar income-history / actualizar income</tspan>
+        </text>
+
+        <text id="pattern-obs-title" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#6D7278">
+            <tspan x="622.5" y="459">Patrones de observación</tspan>
+        </text>
+        <text id="pattern-obs-text" font-family="ArialMT, Arial" font-size="12" font-weight="normal" fill="#6D7278">
+            <tspan x="622.5" y="479">Registro de medias globales</tspan>
+            <tspan x="622.5" y="496">(PIAR_ticks, RA_ticks) en cada tick</tspan>
+            <tspan x="622.5" y="513">Detección de pseudo estado</tspan>
+            <tspan x="622.5" y="530">estacionario con umbrales</tspan>
+        </text>
+
+        <!-- ====== LOOP GRAPHIC ====== -->
+        <g id="Loop" transform="translate(0.000000, 163.000000)" fill="#000000">
+            <path d="M417,0 C473.333044,0 519,46.3385284 519,103.5 C519,118.942627 515.666982,133.595338 509.691079,146.757852 L513.717268,143.8611 C514.365442,143.394911 515.268806,143.542486 515.734968,144.190702 C516.201135,144.83891 516.05352,145.742261 515.405352,146.208441 L506.994463,152.259628 C499.000642,167.419036 487.395461,180.323206 473.345391,189.788513 L472.764458,192.786048 L472.325096,198.94334 L472.613451,205.016225 L473.601113,210.96854 L475.260218,216.763822 L477.562686,222.365383 L477.751831,222.71444 L477.857193,218.028501 C477.874959,217.230287 478.536476,216.597641 479.334707,216.615454 C480.132935,216.633258 480.765547,217.294798 480.747777,218.093003 L480.529831,227.80844 L483.985163,232.839604 L488.048573,237.638248 L492.642035,242.095283 L497.73736,246.17387 L503.305699,249.837366 L509.319082,253.049332 L515.749536,255.773484 L522.569417,257.973666 L529.752062,259.613675 C531.457523,260.0651 533.847295,260.398357 536.921378,260.613446 C539.995461,260.828535 543.185314,260.885675 546.490937,260.784868 L546.540465,260.778954 L546.673393,260.772441 L607.941,260.864 L603.213503,257.992173 C602.531112,257.57768 602.313984,256.688467 602.728526,256.006084 C603.143059,255.3237 604.032275,255.106613 604.714656,255.521104 L613.524,260.872 L831.501951,261.200001 C832.219921,261.201079 832.8,261.783982 832.8,262.501951 C832.8,263.175048 832.286608,263.727897 831.630976,263.793486 L831.498049,263.799999 L612.823,263.472 L604.489644,268.136284 C603.792917,268.526223 602.912009,268.277476 602.522075,267.58078 C602.132131,266.884082 602.380843,266.003086 603.07757,265.613148 L606.931201,263.462432 L547.017,263.373 L547.017035,263.384972 C542.746566,263.432061 539.267923,263.359753 536.581104,263.168047 C533.894286,262.976341 531.33268,262.617675 528.896286,262.092048 L521.403213,260.366493 L514.289187,258.056596 L507.584474,255.201154 L501.318685,251.838992 L495.521213,248.008828 L490.220904,243.749227 L485.446496,239.098507 L481.226835,234.094868 L477.589888,228.736427 L474.563545,223.049836 L472.175167,217.061787 L470.452091,210.799001 L469.421684,204.28826 L469.111386,197.556322 L469.548801,190.629995 L470.761736,183.536039 L472.778245,176.301158 L475.62682,168.952035 L479.336516,161.515286 L483.937148,154.017461 L489.459432,146.485026 L495.93519,138.944352 L503.397543,131.421694 L511.881114,123.94319 L521.422268,116.534852 L532.059363,109.22255 L543.833008,102.032006 L556.786421,94.9887792 L570.965846,88.1182456 L586.421054,81.4455832 L603.205863,74.9957592 L621.378723,68.793517 L641.003397,62.8633653 L662.149718,57.2295679 L684.894496,51.9161285 L709.322636,46.9467709 L735.527433,42.3449191 L763.611284,38.1336791 L793.687873,34.3358209 L834,31.0107033 L834,31.0107033 L793.687873,34.3358209 L763.611284,38.1336791 L735.527433,42.3449191 L709.322636,46.9467709 L684.894496,51.9161285 L662.149718,57.2295679 L641.003397,62.8633653 L621.378723,68.793517 L603.205863,74.9957592 L586.421054,81.4455832 L570.965846,88.1182456 L556.786421,94.9887792 L543.833008,102.032006 L532.059363,109.22255 L521.422268,116.534852 L511.881114,123.94319 L503.397543,131.421694 L495.93519,138.944352 L489.459432,146.485026 L483.937148,154.017461 L479.336516,161.515286 L475.62682,168.952035 L472.778245,176.301158 L470.761736,183.536039 L469.548801,190.629995 L469.111386,197.556322 L469.421684,204.28826 L470.452091,210.799001 L472.175167,217.061787 L474.563545,223.049836 L477.589888,228.736427 L481.226835,234.094868 L485.446496,239.098507 L490.220904,243.749227 L495.521213,248.008828 L501.318685,251.838992 L507.584474,255.201154 L514.289187,258.056596 L521.403213,260.366493 L528.896286,262.092048 C531.33268,262.617675 533.894286,262.976341 536.581104,263.168047 C539.267923,263.359753 542.746566,263.432061 547.017035,263.384972 L547.017,263.373 L606.931201,263.462432 L603.07757,265.613148 C602.380843,266.003086 602.132131,266.884082 602.522075,267.58078 C602.912009,268.277476 603.792917,268.526223 604.489644,268.136284 L612.823,263.472 L831.498049,263.799999 L831.630976,263.793486 C832.286608,263.727897 832.8,263.175048 832.8,262.501951 C832.8,261.783982 832.219921,261.201079 831.501951,261.200001 L613.524,260.872 L604.714656,255.521104 C604.032275,255.106613 603.143059,255.3237 602.728526,256.006084 C602.313984,256.688467 602.531112,257.57768 603.213503,257.992173 L607.941,260.864 L546.673393,260.772441 L546.540465,260.778954 L546.490937,260.784868 C543.185314,260.885675 539.995461,260.828535 536.921378,260.613446 C533.847295,260.398357 531.457523,260.0651 529.752062,259.613675 L522.569417,257.973666 L515.749536,255.773484 L509.319082,253.049332 L503.305699,249.837366 L497.73736,246.17387 L492.642035,242.095283 L488.048573,237.638248 L483.985163,232.839604 L480.529831,227.80844 L480.747777,218.093003 C480.765547,217.294798 480.132935,216.633258 479.334707,216.615454 C478.536476,216.597641 477.874959,217.230287 477.857193,218.028501 L477.751831,222.71444 L477.562686,222.365383 L475.260218,216.763822 L473.601113,210.96854 L472.613451,205.016225 L472.325096,198.94334 L472.764458,192.786048 L473.345391,189.788513 C487.395461,180.323206 499.000642,167.419036 506.994463,152.259628 L515.405352,146.208441 C516.05352,145.742261 516.201135,144.83891 515.734968,144.190702 C515.268806,143.542486 514.365442,143.394911 513.717268,143.8611 L509.691079,146.757852 C515.666982,133.595338 519,118.942627 519,103.5 C519,46.3385284 473.333044,0 417,0 Z"></path>
+        </g>
+    </g>
+</svg>
