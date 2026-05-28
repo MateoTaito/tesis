@@ -1,0 +1,68 @@
+\documentclass[twocolumn,10pt,letterpaper]{article}
+
+% Paquetes esenciales
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2.5cm}
+\usepackage{times} % Fuente Serif tradicional académica
+\usepackage{microtype} % Mejora el espaciado y la tipografía
+\usepackage{graphicx}
+\usepackage{titlesec}
+\usepackage{lipsum}
+
+% Paquete de citación APA 7
+\usepackage[style=apa, sortcites=true, sorting=nyt, backend=biber]{biblatex}
+\addbibresource{references.bib}
+
+% Formato de secciones
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\title{\vspace{-1.5cm}\Large\bfseries Simulaciones de Cumplimiento Tributario: La Interacción entre la Memoria Institucional y la Memoria Social en Modelos Basados en Agentes}
+\author{
+    \textbf{Tesis de Magíster}\\
+    Universidad Adolfo Ibáñez
+}
+\date{29 de mayo de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción y Problemática General}
+
+La evasión fiscal representa un desafío crítico para las finanzas públicas a nivel global, pero su impacto es particularmente agudo en economías emergentes y en desarrollo que enfrentan una creciente estrechez fiscal. En el contexto de Chile, la maximización de la recaudación y la minimización de la brecha tributaria se han convertido en imperativos de Estado. La promulgación de la Ley N° 21.713 \parencite{ley2024cumplimiento}, enmarcada en el Pacto por el Crecimiento Económico, el Progreso Social y la Responsabilidad Fiscal, subraya la dependencia del país en la reducción de la evasión para financiar compromisos sociales de alto costo, tales como la Pensión Garantizada Universal (PGU). 
+
+Bajo este escenario presupuestario restrictivo, el Estado chileno no puede permitirse ineficiencias operativas en sus procesos de control. Cada unidad monetaria invertida en fiscalización debe generar un retorno marginal positivo que justifique el despliegue de recursos humanos y tecnológicos. La problemática central radica, por tanto, en la necesidad de optimizar las estrategias de auditoría tributaria para asegurar un alto impacto disuasivo y recaudatorio incurriendo en el menor costo administrativo posible. El desafío no es meramente aumentar la cantidad de fiscalizaciones, sino mejorar cualitativamente su selección mediante el aprovechamiento sistemático de datos históricos e inteligencia organizacional.
+
+Para abordar este desafío, el Servicio de Impuestos Internos (SII) de Chile ha transitado desde modelos de control generalistas hacia enfoques altamente focalizados. El Plan de Gestión de Cumplimiento Tributario \parencite{sii2026pgct} establece explícitamente que la "Estrategia de Control y Fiscalización" descarta las auditorías puramente aleatorias. En su lugar, el SII focaliza sus esfuerzos en contribuyentes que presentan niveles de riesgo elevados y un alto impacto en la recaudación, tales como los Grupos Empresariales (que aportan el 67\% de la recaudación tributaria) y los Altos Patrimonios (quienes declaran cerca del 51\% del Impuesto Global Complementario). Este enfoque estratégico requiere que la autoridad fiscal procese continuamente historiales de comportamiento, lo que plantea interrogantes sobre cómo la profundidad temporal de revisión afecta la eficacia de estas políticas sobre el comportamiento de los contribuyentes en el mediano y largo plazo.
+
+\section{Estado del Arte y Justificación}
+
+La complejidad del cumplimiento tributario trasciende el cálculo estrictamente económico propuesto por la teoría neoclásica de la disuasión, donde los individuos son vistos únicamente como maximizadores de utilidad racional. La literatura moderna ha demostrado que el pago de impuestos es un fenómeno intrínsecamente social, donde la moral tributaria y las decisiones de evasión están fuertemente condicionadas por la interacción y el aprendizaje comunitario \parencite{bloomquist2011tax}. Para modelar estos fenómenos dinámicos, el uso de Modelos Basados en Agentes (ABM, por sus siglas en inglés) se ha consolidado como la principal herramienta metodológica en la literatura económica y computacional \parencite{hokamp2010income}.
+
+Los ABM permiten representar a las autoridades fiscales (auditores) y a los contribuyentes como entidades autónomas y heterogéneas que interactúan en redes complejas, proporcionando un entorno de simulación o ``sandbox'' sin costo económico ni riesgo político \parencite{andrei2014agent}. Esta metodología es excepcionalmente útil para evaluar políticas ex-ante, capturando propiedades emergentes que los enfoques analíticos tradicionales ignoran.
+
+Un factor crítico estudiado mediante simulaciones ABM es la "memoria social" de los contribuyentes. La literatura evidencia de forma consistente que los agentes ajustan su nivel de cumplimiento tributario observando y aprendiendo del comportamiento y las experiencias de sus pares inmediatos \parencite{arslan2013effects}. Investigaciones pioneras como SIMULFIS \parencite{llacer2018simulfis, noguera2014tax} demostraron que el fraude fiscal es "contagioso" y se propaga horizontalmente a través de las redes vecinales, un hallazgo respaldado teóricamente como un efecto de imitación y conformidad \parencite{chica2021evolutionary, garcia2019effects}. En escenarios donde los agentes comparten información sobre sus esquemas de evasión y experiencias de auditoría, las tasas de cumplimiento pueden variar drásticamente dependiendo de la estructura de la red subyacente \parencite{garcia2019network}.
+
+Sin embargo, el comportamiento tributario no se modela exclusivamente de forma horizontal. A nivel institucional, investigaciones empíricas demuestran que el historial de auditorías impacta profundamente la probabilidad de que un contribuyente evada en el futuro \parencite{alm2020audit}. De hecho, simulaciones ABM recientes incorporan expectativas Bayesianas actualizadas donde el agente calcula su riesgo basado en el número de veces que ha sido fiscalizado en el pasado \parencite{kuchumova2025tax, rand2019agent}. Paralelamente, del lado de la autoridad fiscal, existen modelos teóricos incipientes que sugieren el uso de historiales corporativos como anclas fundamentales (audit anchors) para guiar decisiones algorítmicas o de predicción estratégica \parencite{bachas2025algorithms, lopez2025laam, rablen2015predictive}. 
+
+Pese a estos avances, investigaciones locales recientes han identificado vacíos fundamentales en la integración dinámica de estas interacciones. \textcite{canessa2025tax} modelaron el impacto de distintas estrategias de fiscalización sobre el cumplimiento tributario, encontrando que la eficiencia de la estrategia fiscalizadora (aleatoria versus focalizada por niveles de ingreso o fraude) está estrictamente condicionada por el lapso de tiempo que los contribuyentes recuerdan las experiencias de sus pares (memoria social). Su estudio evidenció que para redes con memorias sociales cortas, las auditorías estratégicas son eficientes; pero frente a memorias sociales prolongadas, el ente fiscalizador pierde competitividad debido a la rápida adaptación del evasor, lo que paradójicamente favorece estrategias aleatorias.
+
+El modelo de \textcite{canessa2025tax}, si bien fundamental, asume que el ente fiscalizador evalúa la evasión de manera transaccional, es decir, observando únicamente el período actual de liquidación. Esta limitación teórica define el problema central de esta investigación: la literatura ha omitido la modelación explícita de la ``memoria institucional''. En la práctica, como lo evidencia el Servicio de Impuestos Internos de Chile y agencias homólogas \parencite{macdonald2026institutional}, los auditores tienen la facultad de realizar revisiones retrospectivas (evaluando entre 1 y 15 períodos fiscales anteriores) utilizando registros históricos formales. 
+
+Si bien ciertos modelos reconocen genéricamente que la memoria histórica de sanciones previas es crucial para sostener la disuasión \parencite{antunes2005tax, bloomquist2004multi, hashimzade2018using}, a la fecha, no existen estudios empíricos ni simulaciones ABM que parametricen computacionalmente la profundidad temporal de revisión del auditor como una variable independiente (Memoria Institucional) sujeta, además, a la degradación natural de la información histórica (Ruido de Detección). El vacío de conocimiento radica en ignorar cómo esta persistencia institucional retrospectiva interactúa simultáneamente con la propagación horizontal del fraude a través de la memoria social de los contribuyentes. 
+
+\section{Pregunta de Investigación}
+
+Identificado el vacío en la literatura existente respecto a la ausencia de mecanismos formales de revisión histórica por parte de los fiscalizadores en entornos de aprendizaje social, la presente investigación plantea la siguiente pregunta central:
+
+¿De qué manera la inclusión de una profundidad variable de memoria institucional (capacidad de realizar auditorías retrospectivas sujetas a ruido de detección) por parte del ente fiscalizador interactúa con la memoria social de los contribuyentes para afectar las tasas a largo plazo de cumplimiento tributario y evasión fiscal en un Modelo Basado en Agentes?
+
+A través de la resolución de esta interrogante, se busca entregar herramientas concretas para la calibración óptima de políticas públicas de fiscalización, maximizando la detección de fraudes en ecosistemas sociales altamente adaptativos.
+
+\printbibliography
+
+\end{document}
