@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'primer_escrito.blg'
+[56] biber:342> INFO - === dom may 31, 2026, 20:53:37
+[70] Biber.pm:421> INFO - Reading 'primer_escrito.bcf'
+[129] Biber.pm:1002> INFO - Found 22 citekeys in bib section 0
+[142] Biber.pm:4487> INFO - Processing section 0
+[148] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[149] bibtex.pm:1713> INFO - LaTeX decoding ...
+[160] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[295] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[295] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[295] Biber.pm:4307> INFO - Sorting list 'nyt/apasortcite//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[330] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[330] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[330] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[350] bbl.pm:676> INFO - Writing 'primer_escrito.bbl' with encoding 'UTF-8'
+[364] bbl.pm:779> INFO - Output to primer_escrito.bbl
