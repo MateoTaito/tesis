@@ -1,0 +1,772 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{ine2026ene}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=fb47e2367fcfe0fcc0f92da24eb66198}{%
+           family={{Instituto Nacional de Estadísticas (INE)}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{fullhash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{fullhashraw}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{bibnamehash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{authorbibnamehash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{authornamehash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{authorfullhash}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \strng{authorfullhashraw}{fb47e2367fcfe0fcc0f92da24eb66198}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Trimestre enero--marzo 2026}
+      \field{title}{Boletín ENE informalidad: Tasa de informalidad y condiciones laborales, edición 34}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.ine.gob.cl/docs/default-source/informalidad-y-condiciones-laborales/boletines/2026/ene-informalidad-34.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ine.gob.cl/docs/default-source/informalidad-y-condiciones-laborales/boletines/2026/ene-informalidad-34.pdf
+      \endverb
+    \endentry
+    \entry{sii2026pgct}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=271e46a6b25cd7bf43b0bbb41fb8486e}{%
+           family={{Servicio de Impuestos Internos}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{fullhash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{fullhashraw}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{bibnamehash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{authorbibnamehash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{authornamehash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{authorfullhash}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \strng{authorfullhashraw}{271e46a6b25cd7bf43b0bbb41fb8486e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Documento oficial del Gobierno de Chile}
+      \field{title}{Plan de Gestión de Cumplimiento Tributario 2026}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.sii.cl/destacados/SII_PGCT_2026.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.sii.cl/destacados/SII_PGCT_2026.pdf
+      \endverb
+    \endentry
+    \entry{arslan2013effects}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=230d342fa63df039d788cb868ffde347}{%
+           family={Arslan},
+           familyi={A\bibinitperiod},
+           given={M.O.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{230d342fa63df039d788cb868ffde347}
+      \strng{fullhash}{230d342fa63df039d788cb868ffde347}
+      \strng{fullhashraw}{230d342fa63df039d788cb868ffde347}
+      \strng{bibnamehash}{230d342fa63df039d788cb868ffde347}
+      \strng{authorbibnamehash}{230d342fa63df039d788cb868ffde347}
+      \strng{authornamehash}{230d342fa63df039d788cb868ffde347}
+      \strng{authorfullhash}{230d342fa63df039d788cb868ffde347}
+      \strng{authorfullhashraw}{230d342fa63df039d788cb868ffde347}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Çukurova Üniversitesi Sosyal Bilimler Enstitüsü Dergisi}
+      \field{number}{2}
+      \field{title}{The Effects of Neighborhood on Tax Compliance Rates: Evidence From an Agent Based Model}
+      \field{volume}{22}
+      \field{year}{2013}
+    \endentry
+    \entry{andrei2014agent}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=5c1f80609da910c8524843f437570cec}{%
+           family={Andrei},
+           familyi={A\bibinitperiod},
+           given={A.L.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=aaa3b9fbaba864617600171592272180}{%
+           family={Comer},
+           familyi={C\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=ac0816b36d0ed2c583ac38c7f8d58670}{%
+           family={Koehler},
+           familyi={K\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{fullhash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{fullhashraw}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{bibnamehash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{authorbibnamehash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{authornamehash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{authorfullhash}{aac3aa52100d8ed9730c8a043d486920}
+      \strng{authorfullhashraw}{aac3aa52100d8ed9730c8a043d486920}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Psychology}
+      \field{title}{An agent-based model of network effects on tax compliance and evasion}
+      \field{volume}{40}
+      \field{year}{2014}
+      \field{pages}{119\bibrangedash 133}
+      \range{pages}{15}
+    \endentry
+    \entry{llacer2018simulfis}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=ea33eb0ae61dadb572c4adc12e768eae}{%
+           family={Llàcer},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=6ff95443f4a54f792f3aae5df21db7a3}{%
+           family={Miguel\bibnamedelima Quesada},
+           familyi={M\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           given={F.J.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=d99bb43dca04b166d8ebbffe84435b64}{%
+           family={Noguera},
+           familyi={N\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9b81b7d9a69f682dc14da85f1b4cefac}{%
+           family={Tapia},
+           familyi={T\bibinitperiod},
+           given={E.T.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{6febd5806eeaaf9d49165ae78c0760b8}
+      \strng{fullhash}{6d88a2482361fb52edcdc43a6f3752b5}
+      \strng{fullhashraw}{6d88a2482361fb52edcdc43a6f3752b5}
+      \strng{bibnamehash}{6febd5806eeaaf9d49165ae78c0760b8}
+      \strng{authorbibnamehash}{6febd5806eeaaf9d49165ae78c0760b8}
+      \strng{authornamehash}{6febd5806eeaaf9d49165ae78c0760b8}
+      \strng{authorfullhash}{6d88a2482361fb52edcdc43a6f3752b5}
+      \strng{authorfullhashraw}{6d88a2482361fb52edcdc43a6f3752b5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Agent-based Modeling of Tax Evasion: Theoretical Aspects and Computational Simulations}
+      \field{title}{SIMULFIS: A Simulation Tool to Explore Tax Compliance Behavior}
+      \field{year}{2018}
+    \endentry
+    \entry{noguera2014tax}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d99bb43dca04b166d8ebbffe84435b64}{%
+           family={Noguera},
+           familyi={N\bibinitperiod},
+           given={J.A.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6ff95443f4a54f792f3aae5df21db7a3}{%
+           family={Miguel\bibnamedelima Quesada},
+           familyi={M\bibinitperiod\bibinitdelim Q\bibinitperiod},
+           given={F.J.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9b81b7d9a69f682dc14da85f1b4cefac}{%
+           family={Tapia},
+           familyi={T\bibinitperiod},
+           given={E.T.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=ea33eb0ae61dadb572c4adc12e768eae}{%
+           family={Llàcer},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CAIRN}%
+      }
+      \strng{namehash}{9a81dd9abaf7c36ab9e310615b490588}
+      \strng{fullhash}{c824baa784a8710741403bd6132779e5}
+      \strng{fullhashraw}{c824baa784a8710741403bd6132779e5}
+      \strng{bibnamehash}{9a81dd9abaf7c36ab9e310615b490588}
+      \strng{authorbibnamehash}{9a81dd9abaf7c36ab9e310615b490588}
+      \strng{authornamehash}{9a81dd9abaf7c36ab9e310615b490588}
+      \strng{authorfullhash}{c824baa784a8710741403bd6132779e5}
+      \strng{authorfullhashraw}{c824baa784a8710741403bd6132779e5}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revue française de sociologie}
+      \field{number}{4}
+      \field{title}{Tax compliance, rational choice, and social influence: An agent-based model}
+      \field{volume}{55}
+      \field{year}{2014}
+      \field{pages}{765\bibrangedash 804}
+      \range{pages}{40}
+    \endentry
+    \entry{chica2021evolutionary}{article}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=d825c5fe03798442b15a164083e4737b}{%
+           family={Chica},
+           familyi={C\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c8e1209832beb689700d5e47817f4fab}{%
+           family={Hernandez},
+           familyi={H\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{a59a50566d92eeee95f04f9705682851}
+      \strng{fullhash}{a59a50566d92eeee95f04f9705682851}
+      \strng{fullhashraw}{a59a50566d92eeee95f04f9705682851}
+      \strng{bibnamehash}{a59a50566d92eeee95f04f9705682851}
+      \strng{authorbibnamehash}{a59a50566d92eeee95f04f9705682851}
+      \strng{authornamehash}{a59a50566d92eeee95f04f9705682851}
+      \strng{authorfullhash}{a59a50566d92eeee95f04f9705682851}
+      \strng{authorfullhashraw}{a59a50566d92eeee95f04f9705682851}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Computational Intelligence Magazine}
+      \field{number}{3}
+      \field{title}{An evolutionary game model for understanding fraud in consumption taxes}
+      \field{volume}{16}
+      \field{year}{2021}
+      \field{pages}{30\bibrangedash 43}
+      \range{pages}{14}
+    \endentry
+    \entry{hokamp2010income}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5531227d376ddfdc6475c31fe323322f}{%
+           family={Hokamp},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b10e7538639bec0c47aab67e65828e5e}{%
+           family={Pickhardt},
+           familyi={P\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{fullhash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{fullhashraw}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{bibnamehash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{authorbibnamehash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{authornamehash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{authorfullhash}{2fe285ccf105fda2c8772df49d981aad}
+      \strng{authorfullhashraw}{2fe285ccf105fda2c8772df49d981aad}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Economic Journal}
+      \field{number}{4}
+      \field{title}{Income tax evasion in a society of heterogeneous agents--Evidence from an agent-based model}
+      \field{volume}{24}
+      \field{year}{2010}
+      \field{pages}{541\bibrangedash 553}
+      \range{pages}{13}
+    \endentry
+    \entry{canessa2025tax}{unpublished}{}{}
+      \name{author}{3}{}{%
+        {{hash=c3a621dd49cfffcb8b23afd8512dc6b1}{%
+           family={Canessa},
+           familyi={C\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=a070dc866bbf2518e8670d41523a7f0c}{%
+           family={Peña},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b5900c24a1b3bf7d4c68968b1ff05441}{%
+           family={Quezada},
+           familyi={Q\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{fullhash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{fullhashraw}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{bibnamehash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{authorbibnamehash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{authornamehash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{authorfullhash}{248fd131a936bf94ac88ee6545fc4bec}
+      \strng{authorfullhashraw}{248fd131a936bf94ac88ee6545fc4bec}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Manuscrito en preparación, Universidad Adolfo Ibáñez}
+      \field{title}{Tax Compliance Agent-Based Models}
+      \field{year}{2025}
+    \endentry
+    \entry{debacker2018once}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2c5779b968a6ae06e0b12d695c89f8ad}{%
+           family={DeBacker},
+           familyi={D\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7cdf99759c7e7c2aff091ec4543cc61b}{%
+           family={Heim},
+           familyi={H\bibinitperiod},
+           given={Bradley\bibnamedelima T.},
+           giveni={B\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=f0efca4bbf8b6e0acb98ffb19f990a1a}{%
+           family={Tran},
+           familyi={T\bibinitperiod},
+           given={Anh},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7bb9e24067d38073327558668b9ac330}{%
+           family={Yuskavage},
+           familyi={Y\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of Chicago Press}%
+      }
+      \strng{namehash}{bb86b5e3a82069326fc5d4e509fc81fe}
+      \strng{fullhash}{73d31d8e52e74ee44f5ac9e85c6a186a}
+      \strng{fullhashraw}{73d31d8e52e74ee44f5ac9e85c6a186a}
+      \strng{bibnamehash}{bb86b5e3a82069326fc5d4e509fc81fe}
+      \strng{authorbibnamehash}{bb86b5e3a82069326fc5d4e509fc81fe}
+      \strng{authornamehash}{bb86b5e3a82069326fc5d4e509fc81fe}
+      \strng{authorfullhash}{73d31d8e52e74ee44f5ac9e85c6a186a}
+      \strng{authorfullhashraw}{73d31d8e52e74ee44f5ac9e85c6a186a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Law and Economics}
+      \field{number}{1}
+      \field{title}{Once Bitten, Twice Shy? The Lasting Impact of Enforcement on Tax Compliance}
+      \field{volume}{61}
+      \field{year}{2018}
+      \field{pages}{1\bibrangedash 35}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1086/697683
+      \endverb
+    \endentry
+    \entry{hashimzade2014agent}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=653a397f5919e8d18e6a84f66245a8c1}{%
+           family={Hashimzade},
+           familyi={H\bibinitperiod},
+           given={Nigar},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ce8fd4d319bb9c2daaab599b8d543434}{%
+           family={Myles},
+           familyi={M\bibinitperiod},
+           given={Gareth\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=1becc03b8e827afd2efb2a4329ea6e38}{%
+           family={Page},
+           familyi={P\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod}}}%
+        {{hash=979796977396947d6acfeba6ade44220}{%
+           family={Rablen},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3d06bd97c27d1a95e205459139bc639a}
+      \strng{fullhash}{35540b2ad99fca6c6edf425ccb4cd66d}
+      \strng{fullhashraw}{35540b2ad99fca6c6edf425ccb4cd66d}
+      \strng{bibnamehash}{3d06bd97c27d1a95e205459139bc639a}
+      \strng{authorbibnamehash}{3d06bd97c27d1a95e205459139bc639a}
+      \strng{authornamehash}{3d06bd97c27d1a95e205459139bc639a}
+      \strng{authorfullhash}{35540b2ad99fca6c6edf425ccb4cd66d}
+      \strng{authorfullhashraw}{35540b2ad99fca6c6edf425ccb4cd66d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economics of Governance}
+      \field{number}{2}
+      \field{title}{The use of agent-based modelling to investigate tax compliance}
+      \field{volume}{16}
+      \field{year}{2014}
+      \field{pages}{143\bibrangedash 164}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s10101-014-0151-8
+      \endverb
+    \endentry
+    \entry{dimauro2019contagion}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=33df0a1f9a21d9b853fc1f131d1f0bcc}{%
+           family={Di\bibnamedelima Mauro},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Letizia\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=09d631bf370ac892208b4ce3e0356775}{%
+           family={Pluchino},
+           familyi={P\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=43bd5b52c04aa3f4025419be75cc5f5b}{%
+           family={Biondo},
+           familyi={B\bibinitperiod},
+           given={Alessio\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{fullhash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{fullhashraw}{65d260fc94cecbff6c89716d590058e0}
+      \strng{bibnamehash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{authorbibnamehash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{authornamehash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{authorfullhash}{65d260fc94cecbff6c89716d590058e0}
+      \strng{authorfullhashraw}{65d260fc94cecbff6c89716d590058e0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The European Physical Journal B}
+      \field{title}{Tax evasion as a contagion game: evidences from an agent-based model}
+      \field{volume}{92}
+      \field{year}{2019}
+      \field{pages}{103}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1140/epjb/e2019-90722-9
+      \endverb
+    \endentry
+    \entry{alm2017neighbour}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=f31d7b2f3bc4d47c8f6c6cc2b5f58e07}{%
+           family={Alm},
+           familyi={A\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=012a4d4571df41b313cebfd082cff259}{%
+           family={Bloomquist},
+           familyi={B\bibinitperiod},
+           given={Kim\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=09d4e2e861f8868888821cd679260dbe}{%
+           family={McKee},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{fullhash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{fullhashraw}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{bibnamehash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{authorbibnamehash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{authornamehash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{authorfullhash}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \strng{authorfullhashraw}{f3b743cae7a4d5e36be8bbd0b353e378}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fiscal Studies}
+      \field{number}{4}
+      \field{title}{When You Know Your Neighbour Pays Taxes: Information, Peer Effects and Tax Compliance}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{pages}{587\bibrangedash 613}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1111/1475-5890.12111
+      \endverb
+    \endentry
+    \entry{garcia2019network}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{hash=51d9a427f98a4fe82b32a509cdf2b371}{%
+           family={Garcia\bibnamedelima Alvarado},
+           familyi={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{fullhash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{fullhashraw}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{bibnamehash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{authorbibnamehash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{authornamehash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{authorfullhash}{51d9a427f98a4fe82b32a509cdf2b371}
+      \strng{authorfullhashraw}{51d9a427f98a4fe82b32a509cdf2b371}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Network Theory and Agent-Based Modeling in Economics and Finance}
+      \field{title}{Network-based policies versus tax evasion}
+      \field{year}{2019}
+    \endentry
+    \entry{hashimzade2016predictive}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=653a397f5919e8d18e6a84f66245a8c1}{%
+           family={Hashimzade},
+           familyi={H\bibinitperiod},
+           given={Nigar},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ce8fd4d319bb9c2daaab599b8d543434}{%
+           family={Myles},
+           familyi={M\bibinitperiod},
+           given={Gareth\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=979796977396947d6acfeba6ade44220}{%
+           family={Rablen},
+           familyi={R\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{fullhash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{fullhashraw}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{bibnamehash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{authorbibnamehash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{authornamehash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{authorfullhash}{c60feab237a49609ffc9fae9da05edd5}
+      \strng{authorfullhashraw}{c60feab237a49609ffc9fae9da05edd5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Behavior \& Organization}
+      \field{title}{Predictive analytics and the targeting of audits}
+      \field{volume}{124}
+      \field{year}{2016}
+      \field{pages}{130\bibrangedash 145}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.jebo.2015.11.009
+      \endverb
+    \endentry
+    \entry{hashimzade2016risk}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=653a397f5919e8d18e6a84f66245a8c1}{%
+           family={Hashimzade},
+           familyi={H\bibinitperiod},
+           given={Nigar},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ce8fd4d319bb9c2daaab599b8d543434}{%
+           family={Myles},
+           familyi={M\bibinitperiod},
+           given={Gareth\bibnamedelima D.},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sage Publications}%
+      }
+      \strng{namehash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{fullhash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{fullhashraw}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{bibnamehash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{authorbibnamehash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{authornamehash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{authorfullhash}{130c48bb2a93a19a1a9810a9da40de4d}
+      \strng{authorfullhashraw}{130c48bb2a93a19a1a9810a9da40de4d}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Public Finance Review}
+      \field{number}{1}
+      \field{title}{Risk-based Audits in a Behavioral Model}
+      \field{volume}{44}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 26}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1177/1091142115602062
+      \endverb
+    \endentry
+    \entry{antunes2005tax}{incollection}{}{}
+      \name{author}{4}{}{%
+        {{hash=d9986219b290928ab6ee3ef5a7aa7ae0}{%
+           family={Antunes},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=451e4cc8968a6522224d7a08abf21e5f}{%
+           family={Balsa},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8158b450764d4feb5a1807d86221a2a0}{%
+           family={Urbano},
+           familyi={U\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c2fa41ec919d818f8f5e198c13ec0903}{%
+           family={Moniz},
+           familyi={M\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8210d3cb0e37efce1157a562bfbde18f}
+      \strng{fullhash}{ea2e0af215c7567061890dd215f19a00}
+      \strng{fullhashraw}{ea2e0af215c7567061890dd215f19a00}
+      \strng{bibnamehash}{8210d3cb0e37efce1157a562bfbde18f}
+      \strng{authorbibnamehash}{8210d3cb0e37efce1157a562bfbde18f}
+      \strng{authornamehash}{8210d3cb0e37efce1157a562bfbde18f}
+      \strng{authorfullhash}{ea2e0af215c7567061890dd215f19a00}
+      \strng{authorfullhashraw}{ea2e0af215c7567061890dd215f19a00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multi-Agent-Based Simulation}
+      \field{title}{Tax compliance in a simulated heterogeneous multi-agent society}
+      \field{year}{2005}
+    \endentry
+    \entry{bloomquist2004multi}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=a6a6be0f38e95cbc518293e90949b238}{%
+           family={Bloomquist},
+           familyi={B\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{fullhash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{fullhashraw}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{bibnamehash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{authorbibnamehash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{authornamehash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{authorfullhash}{a6a6be0f38e95cbc518293e90949b238}
+      \strng{authorfullhashraw}{a6a6be0f38e95cbc518293e90949b238}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Annual Conference on Taxation}
+      \field{title}{Multi-agent based simulation of the deterrent effects of taxpayer audits}
+      \field{year}{2004}
+      \field{pages}{156\bibrangedash 166}
+      \range{pages}{11}
+    \endentry
+    \entry{hashimzade2018using}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=98f79fbae497af877475ae1877151581}{%
+           family={Hashimzade},
+           familyi={H\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=2a088bf9e244d1be16c526633443f7c0}{%
+           family={Myles},
+           familyi={M\bibinitperiod},
+           given={G.D.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{fullhash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{fullhashraw}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{bibnamehash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{authorbibnamehash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{authornamehash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{authorfullhash}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \strng{authorfullhashraw}{ed07ccbfaccda20525c2cad1fb15d4c9}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Agent-based Modeling of Tax Evasion: Theoretical Aspects and Computational Simulations}
+      \field{title}{Using Agent-Based Modeling to Analyze Tax Compliance and Auditing}
+      \field{year}{2018}
+    \endentry
+    \entry{hokamp2014dynamics}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=51ace3447c3361b732322cd2194a1ecb}{%
+           family={Hokamp},
+           familyi={H\bibinitperiod},
+           given={Sascha},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{fullhash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{fullhashraw}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{bibnamehash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{authorbibnamehash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{authornamehash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{authorfullhash}{51ace3447c3361b732322cd2194a1ecb}
+      \strng{authorfullhashraw}{51ace3447c3361b732322cd2194a1ecb}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Psychology}
+      \field{title}{Dynamics of tax evasion with back auditing, social norm updating, and public goods provision -- An agent-based simulation}
+      \field{volume}{40}
+      \field{year}{2014}
+      \field{pages}{187\bibrangedash 199}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.joep.2013.01.006
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

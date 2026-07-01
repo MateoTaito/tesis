@@ -1,0 +1,29 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Definición del problema u oportunidad}{1}{chapter.2}%
+\contentsline {section}{\numberline {1.1}Necesidad de optimización del proceso de auditorías}{2}{section.4}%
+\contentsline {section}{\numberline {1.2}La evasión como fenómeno social}{2}{section.5}%
+\contentsline {section}{\numberline {1.3}Modelos Basados en Agentes como herramienta}{3}{section.6}%
+\contentsline {section}{\numberline {1.4}Estrategias de fiscalización}{3}{section.7}%
+\contentsline {section}{\numberline {1.5}Memoria social y su degradación}{3}{section.8}%
+\contentsline {section}{\numberline {1.6}Memoria institucional}{4}{section.9}%
+\contentsline {section}{\numberline {1.7}Problemática de la tesis}{4}{section.10}%
+\contentsline {chapter}{\numberline {2}Estado del arte}{6}{chapter.11}%
+\contentsline {section}{\numberline {2.1}Modelos Basados en Agentes de evasión tributaria}{6}{section.12}%
+\contentsline {section}{\numberline {2.2}Memoria social y aprendizaje en red}{7}{section.13}%
+\contentsline {section}{\numberline {2.3}Estrategias de selección de auditoría}{7}{section.14}%
+\contentsline {section}{\numberline {2.4}Memoria institucional y revisión retrospectiva}{8}{section.15}%
+\contentsline {section}{\numberline {2.5}Síntesis del vacío}{9}{section.16}%
+\contentsline {chapter}{\numberline {3}Hipótesis y objetivos}{10}{chapter.17}%
+\contentsline {section}{\numberline {3.1}Pregunta de Investigación}{10}{section.18}%
+\contentsline {section}{\numberline {3.2}Hipótesis}{10}{section.19}%
+\contentsline {subsection}{\numberline {3.2.1}Hipótesis principal}{10}{subsection.20}%
+\contentsline {subsection}{\numberline {3.2.2}Hipótesis secundarias}{10}{subsection.21}%
+\contentsline {section}{\numberline {3.3}Objetivos}{11}{section.22}%
+\contentsline {subsection}{\numberline {3.3.1}Objetivo general}{11}{subsection.23}%
+\contentsline {subsection}{\numberline {3.3.2}Objetivos específicos}{11}{subsection.24}%
+\contentsline {section}{\numberline {3.4}Propuesta metodológica}{11}{section.29}%
+\contentsline {section}{\numberline {3.5}Variables y operacionalización}{12}{section.31}%
+\contentsline {subsection}{\numberline {3.5.1}Variables independientes}{12}{subsection.32}%
+\contentsline {subsection}{\numberline {3.5.2}Variables dependientes}{13}{subsection.33}%
+\contentsline {subsection}{\numberline {3.5.3}Dominio experimental}{13}{subsection.34}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{14}{chapter*.35}%
