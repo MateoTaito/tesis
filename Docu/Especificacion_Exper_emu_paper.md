@@ -36,8 +36,8 @@ Experimento para analizar la **interacción entre memoria social (period-frauds)
 | `tax-payer-audit-selection` | random, income-level, strategic | Método de selección de contribuyentes a auditar |
 
 ## Configuración de Ejecución
-- **Repeticiones**: 1 (una única ejecución completa)
-- **Duración**: 5,000 pasos
+- **Repeticiones**: 3 (tres ejecuciones completas por combinación)
+- **Duración**: 10,000 pasos
 - **Tipo de reporte**: Final (runMetricsEveryStep = false)
 
 ## Métricas Registradas (al final del experimento)
@@ -71,10 +71,15 @@ Experimento para analizar la **interacción entre memoria social (period-frauds)
 ## Notas Importantes
 - Los parámetros están explícitamente especificados en el XML del experimento
 - La reproducibilidad está garantizada al fijar todos los valores
-- El experimento no varía `institutional-memory` ni `audit-noise` (mantiene valores por defecto: 1 y 0 respectivamente)
-- Cada simulación dura exactamente 5,000 ticks
+- El experimento no varía `institutional-memory` ni `audit-noise` (mantiene valores por defecto: 1 y 0 respectivamente, que tras el fix de 2026-07-06 son **equivalentes al modelo ABM_Original** bit-a-bit bajo misma seed)
+- Cada simulación dura exactamente 10,000 ticks
 
 ## Cambios Realizados (2026-05-19)
 - Agregados todos los parámetros como `<enumeratedValueSet>` explícitos
 - Documentación de especificación completa
 - Confirmación de valores: todos coinciden con especificación solicitada
+
+## Cambios Realizados (2026-07-06)
+- Sincronización de este documento con el XML efectivo del experimento (3 repeticiones / 10,000 pasos)
+- Nota sobre equivalencia bit-a-bit con `ABM_Original.nlogo` bajo `institutional-memory = 1, audit-noise = 0` (validado con seeds 42, 7, 100)
+- Resultados pre-fix movidos a `Resultados_experimentos/Exp_fallidos_post_fix/`

@@ -41,7 +41,7 @@ netlogo-headless \
 ### Feature clave: memoria institucional
 - `institutional-memory` (1–15): cuántos períodos hacia atrás pueden auditar
 - `audit-noise` (0–0.5): degradación de detección en períodos lejanos
-- Cada contribuyente mantiene `income-history` (FIFO) y `audited-periods` (evita re-auditoría)
+- Cada contribuyente mantiene `income-history` (FIFO) y `audited-periods` (ventana deslizante sincronizada: marca por `institutional-memory` ticks, no permanente)
 - Ver `Especificación ABM_ Tax-Evation_1_2_con_memoria_institucional.md` para detalle completo
 
 ### Métricas principales
@@ -82,3 +82,5 @@ python3 plot_interaction_analysis.py
 - **Los experimentos se definen en XML** compatible con BehaviorSpace (DTD `behaviorspace.dtd`)
 - **Los CSV de salida tienen 6 filas de metadata** antes de los datos — los scripts de análisis las saltan
 - **No modificar `ABM_Original.nlogo`** — es la referencia base, todo cambio va en `ABM_TESIS_CHANGES.nlogo`
+- **Equivalencia bit-a-bit**: con `institutional-memory=1, audit-noise=0` (defaults del slider), `ABM_TESIS_CHANGES.nlogo` produce **resultados idénticos** a `ABM_Original.nlogo` bajo la misma seed (validado para seeds 42, 7, 100 en 1000 ticks con 3 estrategias). Esto se logra porque (a) la captura de historial se hace al inicio de `go` antes de `make-audit` (offset 0 = período actual) y (b) la guarda `any-audit-happened` evita que el `ask x [...]` se ejecute cuando el auditor no pasó la verificación de eficiencia, replicando exactamente la guarda del modelo original
+- **Estructura clave del fix** (2026-07-06): la captura de historial es `ask turtle w` por who-number (no `ask tax-payers`) para evitar consumo aleatorio del agentset; la auditoría está envuelta en `if any-audit-happened [...]` para mantener la guarda original

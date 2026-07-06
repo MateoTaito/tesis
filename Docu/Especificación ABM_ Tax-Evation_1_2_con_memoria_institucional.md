@@ -116,15 +116,15 @@
 2. **Registro de series**: agrega media de `pct-income-report` a `PIAR_ticks` y media de `risk-aversion` a `RA_ticks`
 3. **Detección de pseudo estado estacionario**: umbral `PIAR < 0.000001`, `RA < 0.0005`
 4. **Checkpoint tick 10000**: guarda `PIAR_10000` y `PRA_10000`
-5. **Ejecuta auditoría (`make-audit`)** — ver sección 3.1
-6. **Acumulación de métricas** (si `ticks ≥ 25000`)
-7. **Ajuste de auditores (`auditors-adjust-pct-eff`)**
-8. **Ajuste conductual (`tax-payers-adjust-pct-inc-rep`)**:
+5. **Guardar historial contable (incluye período actual)**: cada contribuyente agrega `[income, income-reported]` a `income-history` y `false` a `audited-periods`. Si excede `institutional-memory`, elimina el más antiguo de AMBAS listas en lockstep (FIFO, ventana deslizante)
+6. **Ejecuta auditoría (`make-audit`)** — ver sección 3.1
+7. **Acumulación de métricas** (si `ticks ≥ 25000`)
+8. **Ajuste de auditores (`auditors-adjust-pct-eff`)**
+9. **Ajuste conductual (`tax-payers-adjust-pct-inc-rep`)**:
    - Ajusta `risk-aversion` por influencia vecinal
    - Ajusta `pct-income-report` con reglas multiplicativas
    - Acota `pct-income-report` a máximo 1
    - Limpia `audit?` y `fraud-detected?`
-9. **Guardar historial contable**: cada contribuyente agrega `[income, income-reported]` a `income-history`. Si excede `institutional-memory`, elimina el más antiguo (FIFO)
 10. **Reasigna `income`** con nuevo draw log-normal
 11. **`tick`**
 
@@ -201,7 +201,7 @@
 
 | Variable | Control | Rango | Default | Descripción |
 |----------|---------|-------|---------|-------------|
-| **`institutional-memory`** | slider | [1, 15] | 1 | **NUEVO:** Cantidad de períodos (incluyendo actual) que los auditores pueden revisar retrospectivamente. Con `institutional-memory = 1` el comportamiento es idéntico al modelo original (solo período actual). |
+| **`institutional-memory`** | slider | [1, 15] | 1 | **NUEVO:** Cantidad de períodos (incluyendo actual) que los auditores pueden revisar retrospectivamente. Con `institutional-memory = 1` y `audit-noise = 0` el comportamiento es **idéntico** al modelo original (validado con misma seed: 42, 7, 100). |
 | **`audit-noise`** | slider | [0, 0.5] | 0.0 | **NUEVO:** Factor de ruido que reduce la probabilidad de detección en períodos pasados. La reducción es `audit-noise × period-offset`, donde `period-offset` es la distancia al presente. Con `audit-noise = 0` no hay degradación. |
 
 ---
@@ -217,32 +217,39 @@
 
 ---
 
-## 6) Lógica de detección de duplicados (Opción E)
+## 6) Lógica de detección de duplicados y ventana deslizante
 
 Cuando un contribuyente es seleccionado para auditoría:
-- Se revisa la ventana de `institutional-memory` períodos
-- **Cada período se audita solo si NO fue auditado antes**
-- Si el período ya fue auditado (marcado en `audited-periods`), se salta
+- Se revisa la ventana de `institutional-memory` períodos hacia atrás (incluyendo el actual)
+- **Cada período se audita solo si NO fue auditado antes dentro de la ventana actual** (marcado en `audited-periods`)
+- Si el período ya fue auditado, se salta la verificación de eficiencia (no se consume `random-float`)
 - La fatiga (`nr-audits-done`) se aplica a TODOS los períodos revisados (se salten o no), representando el costo del proceso de revisión
+- **Ventana deslizante**: `audited-periods` se recorta en lockstep con `income-history` cada tick. Cuando un dato viejo se elimina de `income-history` (FIFO), su marca correspondiente en `audited-periods` también se elimina. Esto garantiza que cada período se audite como máximo una vez durante su vida en la ventana de memoria institucional
+- El `ask x [...]` que aplica el resultado al contribuyente SOLO se ejecuta si el auditor efectivamente pasó la verificación de eficiencia en al menos un período (guarda `any-audit-happened`). Esto replica el comportamiento del modelo original, donde `after-tax-income` y `fraud-detect-hist` solo se actualizan si la auditoría procedió
 
 Esto evita:
 - Penalizaciones múltiples por el mismo fraude
-- Re-auditoría innecesaria de períodos ya revisados
+- Re-auditoría innecesaria de períodos ya revisados (dentro de la ventana)
 - "Bolas de nieve" de auditorías acumuladas
+- Acoplamiento de la secuencia aleatoria con la presencia de memoria institucional en estado base
 
 ---
 
-## 7) Flujo del historial de ingresos
+## 7) Flujo del historial de ingresos y de períodos auditados
 
 ```
-Cada tick, ANTES de reasignar income:
+Cada tick, AL INICIO del tick (antes de la auditoría):
   income-history ← append [income, income-reported]
+  audited-periods ← append false
   Si length(income-history) > institutional-memory:
     income-history ← sublist(income-history, -institutional-memory, length)
+    audited-periods ← sublist(audited-periods, -institutional-memory, length)
 ```
 
-- **FIFO**: los registros más nuevos se agregan al final; si se excede la profundidad, se eliminan los más antiguos
-- **Deep copy**: se guarda una copia del par `[income, income-reported]` antes de que `income` sea recalculado
+- **FIFO sincronizado**: ambas listas se recortan en lockstep, manteniendo la correspondencia índice-a-índice entre dato y marca
+- **Al inicio del tick (no al final)**: la captura se hace ANTES de `make-audit` para que el offset 0 de `income-history` contenga el par `[income, income-reported]` del período que se está auditando. Esto es lo que permite que `institutional-memory = 1` sea equivalente al modelo original
+- **Deep copy**: se guarda una copia del par `[income, income-reported]` en el momento de la captura
+- **`false` en audited-periods**: el slot recién agregado para el período actual entra con marca `false` (no auditado todavía); el `ask x [...]` al final del loop lo marca como `true` si la auditoría procedió
 
 ---
 
