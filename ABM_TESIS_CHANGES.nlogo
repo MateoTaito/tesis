@@ -1428,6 +1428,63 @@ NetLogo 6.4.0
       <value value="0.0"/>
     </enumeratedValueSet>
   </experiment>
+  <experiment name="Exper_chile_calibrado" repetitions="30" runMetricsEveryStep="false">
+    <setup>setup</setup>
+    <go>go</go>
+    <timeLimit steps="30000"/>
+    <metric>mean [pct-income-report] of tax-payers</metric>
+    <metric>mean [risk-aversion] of tax-payers</metric>
+    <metric>PIAR_10000</metric>
+    <metric>PRA_10000</metric>
+    <metric>acum_frauds_detected</metric>
+    <metric>acum_frauds_perpretated</metric>
+    <metric>acum_frauds_perpretated_all_ags</metric>
+    <metric>SS_PIAR</metric>
+    <metric>SS_RA</metric>
+    <enumeratedValueSet variable="nr-tax-payers">
+      <value value="500"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="nr-auditors">
+      <value value="20"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="actual-audit-rate">
+      <value value="0.02"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="tax-rate">
+      <value value="0.27"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="penalty-rate">
+      <value value="1.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="learning-rate">
+      <value value="0.05"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="initial-Risk-aversion">
+      <value value="0.5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="treshold-influence-income">
+      <value value="1.65"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="tax-payer-audit-selection">
+      <value value="&quot;random&quot;"/>
+      <value value="&quot;income-level&quot;"/>
+      <value value="&quot;strategic&quot;"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="period-frauds">
+      <value value="1"/>
+      <value value="5"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="institutional-memory">
+      <value value="1"/>
+      <value value="3"/>
+      <value value="5"/>
+      <value value="7"/>
+      <value value="15"/>
+    </enumeratedValueSet>
+    <enumeratedValueSet variable="audit-noise">
+      <value value="0.0"/>
+    </enumeratedValueSet>
+  </experiment>
 </experiments>
 @#$#@#$#@
 @#$#@#$#@
