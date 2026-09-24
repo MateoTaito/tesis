@@ -7,6 +7,12 @@
       "skillPath": "academic-research-writer/SKILL.md",
       "computedHash": "229d37b33edb8d684aa75827ce84e4eb9ef0fd1961c3d5404cd77b77e81ba2f5"
     },
+    "academic-search": {
+      "source": "claude-office-skills/skills",
+      "sourceType": "github",
+      "skillPath": "academic-search/SKILL.md",
+      "computedHash": "b82b97a44b44bad390009ccdd7f0adf35390fe7b6690cb05843d752629fdaaeb"
+    },
     "agent-based-modeling": {
       "source": "omer-metin/skills-for-antigravity",
       "sourceType": "github",
@@ -18,6 +24,42 @@
       "sourceType": "github",
       "skillPath": "skills/firecrawl-research-papers/SKILL.md",
       "computedHash": "68c06bc61aebad21a93c53c1da4b9c4dcbecbe07a635976dc3ad8a232554fa33"
+    },
+    "firecrawl-search": {
+      "source": "firecrawl/cli",
+      "sourceType": "github",
+      "skillPath": "skills/firecrawl-search/SKILL.md",
+      "computedHash": "a9e6d5cd4172d1c7cef853b1473436f645acd5a302fc6c4c7638334e60deddd0"
+    },
+    "interview-analyst": {
+      "source": "nealcaren/social-data-analysis",
+      "sourceType": "github",
+      "skillPath": "plugins/interview-analyst/skills/interview-analyst/SKILL.md",
+      "computedHash": "5ec08979e428a1b8ffad2abf27cfa5a0f6aa8fa2e701011132f13b7de9c024df"
+    },
+    "r-analyst": {
+      "source": "nealcaren/social-data-analysis",
+      "sourceType": "github",
+      "skillPath": "plugins/r-analyst/skills/r-analyst/SKILL.md",
+      "computedHash": "6f2f219e04e71882dc9a89f16bb4a8d925319d67567076fe803f89e649d026ff"
+    },
+    "stata-analyst": {
+      "source": "nealcaren/social-data-analysis",
+      "sourceType": "github",
+      "skillPath": "plugins/stata-analyst/skills/stata-analyst/SKILL.md",
+      "computedHash": "38d51a11fcdb6101dc14d66e03a54c6f18ac37cb1543b42bd5ad6d0692eb336e"
+    },
+    "statistics-skills": {
+      "source": "wentorai/research-plugins",
+      "sourceType": "github",
+      "skillPath": "skills/analysis/statistics/SKILL.md",
+      "computedHash": "5fadb1f5127f3cbac6421d39aa7619deadb7f74cba95dbccd4313695e3428155"
+    },
+    "text-analyst": {
+      "source": "nealcaren/social-data-analysis",
+      "sourceType": "github",
+      "skillPath": "plugins/text-analyst/skills/text-analyst/SKILL.md",
+      "computedHash": "0bc245fdf230aed5013031727643e6edef3fe20c5a16be6dae7a84c5d5408174"
     }
   }
 }
