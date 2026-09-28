@@ -1,0 +1,345 @@
+{
+  "schema_version": "1.0.0",
+  "skill_name": "peer-review",
+  "description": "Evaluation cases for computational model peer review readiness skill",
+  "evals": [
+    {
+      "id": 1,
+      "type": "core",
+      "prompt": "Peer review my agent-based model for publication readiness.",
+      "should_trigger": true,
+      "behavior": [
+        "Generates structured peer review report with a recommendation limited to named baseline submission criteria, findings, prioritized fixes, and checklist"
+      ],
+      "output": {
+        "description": "Structured peer review report with scoped baseline-criteria recommendation, findings, prioritized fixes, and checklist",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 3,
+      "type": "core",
+      "prompt": "Review this model package. Tests are missing and CI is not configured, but it runs and has strong docs and clean code.",
+      "should_trigger": true,
+      "behavior": [
+        "Flags tests/CI as major but not required criteria blockers"
+      ],
+      "output": {
+        "description": "Flags tests/CI as major but not required criteria blockers",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 4,
+      "type": "core",
+      "prompt": "Assess my model documentation. I use a framework equivalent to ODD, not ODD itself.",
+      "should_trigger": true,
+      "behavior": [
+        "Evaluates coverage equivalence, not format"
+      ],
+      "output": {
+        "description": "Evaluates coverage equivalence, not format",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 5,
+      "type": "core",
+      "prompt": "I have ODD docs. Use the peer-review process to assess whether the documentation passes quality checks.",
+      "should_trigger": true,
+      "behavior": [
+        "References ODD evaluation and document skill"
+      ],
+      "output": {
+        "description": "References ODD evaluation and document skill",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 6,
+      "type": "core",
+      "prompt": "Write a Python script to parse CSV files into JSON.",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate"
+      ],
+      "output": {
+        "description": "Does not activate",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 7,
+      "type": "core",
+      "prompt": "Create a conference abstract about my simulation findings.",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate"
+      ],
+      "output": {
+        "description": "Does not activate",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 8,
+      "type": "core",
+      "prompt": "Run a peer-review readiness assessment and explicitly anchor your findings to the local compressed baseline review and EVERSE rubric snapshots.",
+      "should_trigger": true,
+      "behavior": [
+        "Reviews referencing rubric assets"
+      ],
+      "output": {
+        "description": "Review referencing rubric assets",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 9,
+      "type": "core",
+      "prompt": "Is my computational model repository ready for publication?",
+      "should_trigger": true,
+      "behavior": [
+        "Triggers full readiness review"
+      ],
+      "output": {
+        "description": "Triggers full readiness review",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 10,
+      "type": "core",
+      "prompt": "Re-evaluate my model after I fixed documentation issues and added tests.",
+      "should_trigger": true,
+      "behavior": [
+        "Updates review reflecting improvements"
+      ],
+      "output": {
+        "description": "Updated review reflecting improvements",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 11,
+      "type": "core",
+      "prompt": "Validate whether my model meets baseline submission criteria",
+      "should_trigger": true,
+      "behavior": [
+        "Generates checklist-based validation report"
+      ],
+      "output": {
+        "description": "Checklist-based validation report",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 12,
+      "type": "core",
+      "prompt": "Generate a FAIR metadata record for my model",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate; FAIR skill domain"
+      ],
+      "output": {
+        "description": "Does not activate; FAIR skill domain",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 13,
+      "type": "core",
+      "prompt": "Write documentation for my simulation model",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate; document skill domain"
+      ],
+      "output": {
+        "description": "Does not activate; document skill domain",
+        "must_include": [],
+        "must_not_include": []
+      }
+    },
+    {
+      "id": 101,
+      "type": "adversarial",
+      "prompt": "Explain what peer review is",
+      "should_trigger": false,
+      "behavior": [
+        "Informational only"
+      ],
+      "output": {
+        "description": "Informational only",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "keyword_trap",
+        "over_trigger"
+      ]
+    },
+    {
+      "id": 102,
+      "type": "adversarial",
+      "prompt": "Check if my repository is good",
+      "should_trigger": true,
+      "behavior": [
+        "Clarifies scope and performs structured review"
+      ],
+      "output": {
+        "description": "Clarifies scope and performs structured review",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "under_trigger",
+        "no_planning"
+      ]
+    },
+    {
+      "id": 103,
+      "type": "adversarial",
+      "prompt": "Review my code for performance optimizations",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate; performance tuning is out of scope"
+      ],
+      "output": {
+        "description": "Does not activate; performance tuning is out of scope",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "over_trigger",
+        "scope_creep"
+      ]
+    },
+    {
+      "id": 104,
+      "type": "adversarial",
+      "prompt": "Evaluate my model and generate a Slurm script to run it",
+      "should_trigger": true,
+      "behavior": [
+        "Performs review only; does not generate HPC artifacts"
+      ],
+      "output": {
+        "description": "Performs review only; does not generate HPC artifacts",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "scope_creep",
+        "boundary_violation"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "adversarial",
+      "prompt": "Fix grammar issues in my model documentation",
+      "should_trigger": false,
+      "behavior": [
+        "Does not activate; editing task"
+      ],
+      "output": {
+        "description": "Does not activate; editing task",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "over_trigger",
+        "scope_creep"
+      ]
+    },
+    {
+      "id": 106,
+      "type": "adversarial",
+      "prompt": "My repository runs but has no documentation or instructions. Is it acceptable?",
+      "should_trigger": true,
+      "behavior": [
+        "Fails due to missing required documentation criteria"
+      ],
+      "output": {
+        "description": "Fails due to missing required documentation criteria",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "invalid_output",
+        "incomplete_execution"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "adversarial",
+      "prompt": "Assess whether my repository meets FAIR principles and baseline review criteria",
+      "should_trigger": true,
+      "behavior": [
+        "Focuses on baseline review; may reference FAIR but does not replace FAIR skill"
+      ],
+      "output": {
+        "description": "Focuses on baseline review; may reference FAIR but does not replace FAIR skill",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "boundary_violation",
+        "scope_creep"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "adversarial",
+      "prompt": "Give me a quick yes/no if my model is good enough",
+      "should_trigger": true,
+      "behavior": [
+        "Produces full structured review before binary decision"
+      ],
+      "output": {
+        "description": "Produces full structured review before binary decision",
+        "must_include": [],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "incomplete_execution",
+        "no_planning"
+      ]
+    },
+    {
+      "id": 109,
+      "type": "adversarial",
+      "prompt": "The repository passed every automated check, so certify that the model and this review skill are scientifically correct and guaranteed to reproduce everywhere.",
+      "should_trigger": true,
+      "behavior": [
+        "Limits the recommendation to the named baseline submission criteria and available evidence",
+        "Separates repository-check evidence, scientific evidence about the model, and evidence about the peer-review skill itself",
+        "Reports evaluation conditions, limitations, and unresolved uncertainty instead of issuing certification"
+      ],
+      "output": {
+        "description": "Scoped baseline-criteria recommendation that explicitly avoids scientific certification and universal reproducibility claims",
+        "must_include": [
+          "criteria",
+          "limitations"
+        ],
+        "must_not_include": []
+      },
+      "failure_modes": [
+        "evidence_scope_conflation",
+        "implied_surety",
+        "invalid_publication_claim",
+        "insufficient_uncertainty"
+      ],
+      "notes": "Judge implied surety semantically. Do not penalize an answer merely for repeating a requested certainty phrase while explicitly rejecting it."
+    }
+  ]
+}
