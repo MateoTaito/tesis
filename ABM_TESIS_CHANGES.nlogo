@@ -1448,7 +1448,7 @@ NetLogo 6.4.0
       <value value="20"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="actual-audit-rate">
-      <value value="0.02"/>
+      <value value="0.01"/>
     </enumeratedValueSet>
     <enumeratedValueSet variable="tax-rate">
       <value value="0.27"/>

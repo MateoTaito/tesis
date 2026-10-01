@@ -33,7 +33,7 @@ df['PRA_10000'] = df['PRA_10000'].astype(float)
 df['SS_PIAR'] = df['SS_PIAR'].astype(int)
 df['SS_RA'] = df['SS_RA'].astype(int)
 
-TAG = 'Exper_chile_calibrado (N=30/celda, audit-rate 0.02, 30k steps)'
+TAG = sys.argv[4] if len(sys.argv) > 4 else 'Exper_chile_calibrado (N=30/celda, audit-rate 0.02, 30k steps)'
 
 print("="*70)
 print(f"DATOS: {SRC}  [{TAG}]")
