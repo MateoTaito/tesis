@@ -8,7 +8,7 @@ globals [max-pop-size  global-audit-perc-eff PIAR_10000 PRA_10000 acum_frauds_de
 ]
 breed [tax-payers tax-payer]
 breed [auditors auditor]
-tax-payers-own [ pct-income-report income audit? income-reported after-tax-income risk-aversion fraud-detected? fiscal-risk-score fraud-detect-hist under_rep_income income-history audited-periods]
+tax-payers-own [ pct-income-report income audit? income-reported after-tax-income risk-aversion fraud-detected? fiscal-risk-score fraud-detect-hist under_rep_income income-history audited-periods evasion-streak]
 auditors-own [pct-audit-efficiency selected-txp-audit nr-audits cumulative-nr-audits cumulative-nr-audits-OK]
 
 to prueba
@@ -126,7 +126,7 @@ to tax-payers-adjust-pct-inc-rep
 
     set pct-income-report ifelse-value pct-income-report > 1 [1] [pct-income-report]
     ;set audit? false
-    set color color-perc-inc-rep pct-income-report
+    ifelse visual-fraud-spread? [ update-fraud-spread-color ] [ set color color-perc-inc-rep pct-income-report ]
   ]
 
   ask tax-payers [set audit? false set fraud-detected? false] ; para reinicializar
@@ -455,9 +455,18 @@ to setup-tax-payers [ntp]
   ask n-of  ntp patches [ sprout-tax-payers 1
   [
     set  shape "person"
-    set pct-income-report  random-float 1
+    ; setup controlado: con start-all-honest? todos parten honestos (PIR = 1.0)
+    ; NOTA: en modo ON se omite el random-float 1 por agente, por lo que el stream
+    ; aleatorio posterior (ingresos, auditores) difiere del setup aleatorio habitual
+    ifelse start-all-honest?
+    [ set pct-income-report 1.0 ]
+    [ set pct-income-report  random-float 1 ]
     set income log-normal-x 16 7
-    set color color-perc-inc-rep pct-income-report
+    ; color inicial coherente con vista de contagio (sin consumir aleatoriedad extra)
+    set evasion-streak 0
+    ifelse visual-fraud-spread?
+    [ ifelse pct-income-report >= 0.9 [ set color green ] [ set evasion-streak 1 set color orange ] ]
+    [ set color color-perc-inc-rep pct-income-report ]
     set income-reported pct-income-report * income
     set after-tax-income income - income-reported *  tax-rate ;
      ; set risk-aversion initial-risk-aversion ; mejor sería función del pct-income-report: menor pct => menor av. riesgo: set risk-aversion U(.5 * pct-income-report,  pct-income-report)
@@ -507,6 +516,22 @@ to-report color-perc-inc-rep [pir]
   [report 15 + pir * 6]
 
 
+end
+
+; VISUALIZACIÓN EXPANSIÓN DE FRAUDE (solo color, sin efecto en lógica ni métricas)
+; verde = honesto (PIR >= 0.9), naranja = primer tick bajo 0.9, rojo = evasión persistente,
+; blue = auditado este tick (domina sobre los anteriores, al tick siguiente vuelve a su color PIR)
+to update-fraud-spread-color
+  if audit?
+  [ set color blue
+    stop ]
+  ifelse pct-income-report >= 0.9
+  [ set evasion-streak 0
+    set color green ]
+  [ set evasion-streak evasion-streak + 1
+    ifelse evasion-streak = 1
+    [ set color orange ]
+    [ set color red ] ]
 end
 
 to-report Uniform_rand [up_lim low_lim]
@@ -847,6 +872,48 @@ audit-noise
 1
 NIL
 HORIZONTAL
+
+SWITCH
+40
+520
+229
+553
+visual-fraud-spread?
+visual-fraud-spread?
+0
+1
+-1000
+
+TEXTBOX
+40
+555
+229
+625
+verde=honesto(>=90%) naranja=1er evasión rojo=persistente azul=auditado
+11
+0.0
+0
+
+SWITCH
+40
+627
+229
+660
+start-all-honest?
+start-all-honest?
+1
+1
+-1000
+
+TEXTBOX
+40
+662
+229
+700
+ON=todos parten PIR=1.0 (verdes) para observar el nacimiento del fraude
+11
+0.0
+0
 
 @#$#@#$#@
 ## WHAT IS IT?
