@@ -3,12 +3,16 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
+PARENT = BASE.parent
 
 # ============================================================================
 # READ ABM_Original (Spreadsheet format - complex)
 # ============================================================================
 
-with open('/home/MTS/UAI/tesis/Resultados_experimentos/Original_exp.csv', 'r') as f:
+with open(PARENT / 'Original_exp.csv', 'r') as f:
     reader = csv.reader(f)
     rows = list(reader)
 
@@ -157,7 +161,7 @@ print(f"Shape: {abm_df.shape}")
 # READ Tax-Evation (3 runs)
 # ============================================================================
 
-with open('./emu_exp_paper_2.csv', 'r') as f:
+with open(BASE / 'emu_exp_paper_2.csv', 'r') as f:
     reader = csv.reader(f)
     rows = list(reader)
 
@@ -233,7 +237,7 @@ ax.grid(True, alpha=0.3)
 ax.set_xticks(sorted(set(abm_summary['period'].unique()) | set(tax_summary['period'].unique())))
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/comparison_line_plot.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'comparison_line_plot.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -280,7 +284,7 @@ for plot_idx, period in enumerate(periods):
 plt.suptitle('Mean Risk Aversion Comparison: ABM vs Tax-Evation', 
              fontsize=14, fontweight='bold', y=1.02)
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/comparison_grouped_bars.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'comparison_grouped_bars.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -312,7 +316,7 @@ ax.set_title('Difference in Mean Risk Aversion\n(Tax-Evation - ABM_Original)\nPo
              fontsize=13, fontweight='bold', pad=20)
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/comparison_difference_heatmap.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'comparison_difference_heatmap.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -386,7 +390,7 @@ ax.grid(True, alpha=0.3, axis='y')
 
 plt.xticks(rotation=0, fontsize=9)
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/comparison_boxplot.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'comparison_boxplot.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -398,7 +402,7 @@ summary_comparison = pd.concat([
     tax_summary[['strategy', 'period', 'mean', 'std']].assign(model='Tax-Evation')
 ], ignore_index=True)
 
-summary_comparison.to_csv('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/summary_comparison.csv', index=False)
+summary_comparison.to_csv(BASE / 'summary_comparison.csv', index=False)
 
 # Calculate absolute differences
 diff_summary = []
@@ -421,7 +425,7 @@ for strategy in strategies:
             })
 
 diff_df_summary = pd.DataFrame(diff_summary)
-diff_df_summary.to_csv('/home/MTS/UAI/tesis/Resultados_experimentos/Comparacion_ABM_vs_TaxEvation/difference_summary.csv', index=False)
+diff_df_summary.to_csv(BASE / 'difference_summary.csv', index=False)
 
 print("\n✓ All comparison plots generated successfully!")
 print("✓ summary_comparison.csv")

@@ -3,9 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
 
 # Read the new results file with 3 repetitions
-with open('/home/MTS/UAI/tesis/Resultados_experimentos/emu_exp_paper_2.csv', 'r') as f:
+with open(BASE / 'emu_exp_paper_2.csv', 'r') as f:
     reader = csv.reader(f)
     rows = list(reader)
 
@@ -54,7 +57,7 @@ ax.grid(True, alpha=0.3)
 ax.set_xticks(sorted(summary['Period Frauds'].unique()))
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_line_3runs.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_line_3runs.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -83,7 +86,7 @@ ax.legend(fontsize=11, loc='best')
 ax.grid(True, alpha=0.3, axis='y')
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_grouped_bars_3runs.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_grouped_bars_3runs.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -103,7 +106,7 @@ ax.set_title('Mean Risk Aversion Heatmap\n(3 runs averaged)',
              fontsize=14, fontweight='bold', pad=20)
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_heatmap_3runs.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_heatmap_3runs.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -135,7 +138,7 @@ for idx, period in enumerate(sorted(period_values)):
 plt.suptitle('Mean Risk Aversion by Strategy\n(3 runs averaged, stratified by Social Memory)', 
              fontsize=14, fontweight='bold', y=1.02)
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_faceted_3runs.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_faceted_3runs.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
@@ -158,17 +161,17 @@ ax.grid(True, alpha=0.3)
 ax.set_xticks(sorted(summary['Period Frauds'].unique()))
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/income_report_plot_3runs.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'income_report_plot_3runs.png', dpi=300, bbox_inches='tight')
 plt.close()
 
 # ============================================================================
 # SAVE SUMMARY TABLE
 # ============================================================================
 summary_pivot = summary.pivot(index='Strategy', columns='Period Frauds', values='Mean Risk Aversion')
-summary_pivot.to_csv('/home/MTS/UAI/tesis/Resultados_experimentos/summary_3runs_mean_risk_aversion.csv')
+summary_pivot.to_csv(BASE / 'summary_3runs_mean_risk_aversion.csv')
 
 income_pivot = summary.pivot(index='Strategy', columns='Period Frauds', values='Mean Income Report')
-income_pivot.to_csv('/home/MTS/UAI/tesis/Resultados_experimentos/summary_3runs_mean_income_report.csv')
+income_pivot.to_csv(BASE / 'summary_3runs_mean_income_report.csv')
 
 print("\n✓ All plots generated successfully!")
 print("✓ summary_3runs_mean_risk_aversion.csv")

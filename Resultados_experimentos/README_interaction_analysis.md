@@ -10,7 +10,7 @@ This script analyzes the interaction between audit selection strategies (`tax-pa
 ## Dependencies
 Create and activate the virtual environment:
 ```bash
-cd /home/MTS/UAI/tesis/Resultados_experimentos
+cd Resultados_experimentos
 source venv/bin/activate  # On Linux/Mac
 # or: venv\Scripts\activate  (On Windows)
 ```

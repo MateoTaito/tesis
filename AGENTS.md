@@ -10,7 +10,8 @@ Tesis de magíster. Simulaciones NetLogo de evasión tributaria (modelo basado e
 
 ## NetLogo
 
-Instalado en `/home/MTS/local/netlogo` (v6.4.0, Java 25).
+Instalado en `/home/mts/local/netlogo` (v6.4.0, trae Java 17 propio).
+Wrappers en `~/.local/bin` (`netlogo`, `netlogo-headless`) — requiere `~/.local/bin` en `PATH`.
 
 | Comando | Uso |
 |---------|-----|
@@ -55,15 +56,18 @@ netlogo-headless \
 Scripts Python en `Resultados_experimentos/`:
 - `plot_interaction_analysis.py` — genera gráficos de interacción (líneas, barras, heatmap, facetas)
 - `plot_interaction_analysis_3runs.py` — variante para múltiples repeticiones
-- Requiere: `pandas`, `matplotlib`, `seaborn`, `numpy`
+- Entorno: `Resultados_experimentos/venv/` (creado con `uv venv`, paquetes: `pandas`, `matplotlib`, `seaborn`, `numpy`). Los scripts legacy con paths absolutos `/home/MTS/UAI/...` fueron migrados a `Path(__file__).parent` (2026-10-14).
 - Los datos de entrada son CSV de BehaviorSpace (6 filas de metadata, datos desde fila 7)
 
 ### Re-generar gráficos
 
 ```bash
 cd Resultados_experimentos
+source venv/bin/activate
 python3 plot_interaction_analysis.py
 ```
+
+Si falta el venv: `uv venv Resultados_experimentos/venv && uv pip install --python Resultados_experimentos/venv/bin/python pandas matplotlib seaborn numpy`.
 
 ## Documentos de referencia
 

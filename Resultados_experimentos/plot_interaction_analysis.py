@@ -3,9 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from pathlib import Path
+
+BASE = Path(__file__).resolve().parent
 
 # Read the CSV file manually using csv.reader to handle the format correctly
-with open('/home/MTS/UAI/tesis/Resultados_experimentos/exp_emu_paper.csv', 'r') as f:
+with open(BASE / 'exp_emu_paper.csv', 'r') as f:
     reader = csv.reader(f)
     rows = list(reader)
 
@@ -57,7 +60,7 @@ ax.grid(True, alpha=0.3)
 ax.set_xticks(sorted(summary['Period Frauds'].unique()))
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_line.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_line.png', dpi=300, bbox_inches='tight')
 print("\n✓ Saved: interaction_plot_line.png")
 plt.close()
 
@@ -89,7 +92,7 @@ ax.legend(fontsize=11, loc='best')
 ax.grid(True, alpha=0.3, axis='y')
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_grouped_bars.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_grouped_bars.png', dpi=300, bbox_inches='tight')
 print("✓ Saved: interaction_plot_grouped_bars.png")
 plt.close()
 
@@ -113,7 +116,7 @@ ax.set_title('Mean Risk Aversion Heatmap: Strategy × Period Frauds',
              fontsize=14, fontweight='bold', pad=20)
 
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_heatmap.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_heatmap.png', dpi=300, bbox_inches='tight')
 print("✓ Saved: interaction_plot_heatmap.png")
 plt.close()
 
@@ -147,7 +150,7 @@ for idx, period in enumerate(sorted(period_values)):
 plt.suptitle('Mean Risk Aversion by Strategy (Stratified by Period Frauds)', 
              fontsize=14, fontweight='bold', y=1.02)
 plt.tight_layout()
-plt.savefig('/home/MTS/UAI/tesis/Resultados_experimentos/interaction_plot_faceted.png', dpi=300, bbox_inches='tight')
+plt.savefig(BASE / 'interaction_plot_faceted.png', dpi=300, bbox_inches='tight')
 print("✓ Saved: interaction_plot_faceted.png")
 plt.close()
 
@@ -155,7 +158,7 @@ plt.close()
 # SUMMARY TABLE TO CSV
 # ============================================================================
 summary_pivot = summary.pivot(index='Strategy', columns='Period Frauds', values='Mean Risk Aversion')
-summary_pivot.to_csv('/home/MTS/UAI/tesis/Resultados_experimentos/summary_mean_risk_aversion.csv')
+summary_pivot.to_csv(BASE / 'summary_mean_risk_aversion.csv')
 print("✓ Saved: summary_mean_risk_aversion.csv")
 
 print("\n" + "="*70)
