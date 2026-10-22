@@ -1,3 +1,6 @@
 #template
 Recursos/templateLatex
 templateLatex.zip
+
+# CSVs pesados generados por corridas headless (no versionar; regenerables)
+Resultados_experimentos/Exp_trajectories/trajectory_50k.csv

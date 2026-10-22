@@ -47,6 +47,12 @@ to go
 
   if ticks = 10000 [set PIAR_10000 mean [pct-income-report] of tax-payers set PRA_10000 mean [risk-aversion] of tax-payers]
 
+  ; paciente cero: con seed-fraud? ON, al inicio del 2do tick (ticks = 1) un
+  ; contribuyente pasa a evasión total (PIR 0). Con OFF no se ejecuta nada
+  ; (ni siquiera RNG), por lo que la equivalencia con el original se mantiene
+  if seed-fraud? and ticks = 1
+  [ ask one-of tax-payers [ set pct-income-report 0 set income-reported 0 ] ]
+
   ; guardar historial de ingresos ANTES de la auditoría (incluye el período actual)
   ; ventana deslizante: audited-periods se recorta en lockstep con income-history
   let n-capture count tax-payers
@@ -611,10 +617,10 @@ ticks
 30.0
 
 BUTTON
-193
-502
-260
-535
+40
+525
+132
+558
 NIL
 setup
 NIL
@@ -683,10 +689,10 @@ tax-payer-audit-selection
 2
 
 BUTTON
-195
-542
-258
-575
+137
+525
+229
+558
 NIL
 go
 T
@@ -730,10 +736,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-10
-542
-190
-575
+40
+565
+229
+598
 max-nr-simulated-steps
 max-nr-simulated-steps
 1
@@ -875,9 +881,9 @@ HORIZONTAL
 
 SWITCH
 40
-520
+605
 229
-553
+638
 visual-fraud-spread?
 visual-fraud-spread?
 0
@@ -886,9 +892,9 @@ visual-fraud-spread?
 
 TEXTBOX
 40
-555
+640
 229
-625
+710
 verde=honesto(>=90%) naranja=1er evasión rojo=persistente azul=auditado
 11
 0.0
@@ -896,9 +902,9 @@ verde=honesto(>=90%) naranja=1er evasión rojo=persistente azul=auditado
 
 SWITCH
 40
-627
+717
 229
-660
+750
 start-all-honest?
 start-all-honest?
 1
@@ -907,10 +913,31 @@ start-all-honest?
 
 TEXTBOX
 40
-662
+752
 229
-700
+790
 ON=todos parten PIR=1.0 (verdes) para observar el nacimiento del fraude
+11
+0.0
+0
+
+SWITCH
+40
+797
+229
+830
+seed-fraud?
+seed-fraud?
+0
+1
+-1000
+
+TEXTBOX
+40
+832
+229
+870
+ON=al 2do tick un contribuyente evade todo (PIR 0) para observar el contagio
 11
 0.0
 0

@@ -1,0 +1,8 @@
+MERGE N=10 PhaseTransition
+batch1: 48 filas <- phase_transition_50k.csv
+batch2: 112 filas <- phase_transition_50k_batch2.csv
+merged: 160 filas (16 combos x 10), [run number] renumerado 1..10 por combo
+md5 modelo : 9f7147e6202cddef9b9be1475130223f  (idéntico en ambas tandas: verificado)
+md5 xml b1 : a1c761b6408d8b8bb05e5ae9506e3035
+md5 xml b2 : ec52acbc3802245c91e8ff29b9a2f54c
+Nota: extensión secuencial pre-registrada (N=3 analizado antes); inferencia final sobre N=10.
