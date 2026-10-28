@@ -204,6 +204,7 @@
 | **`institutional-memory`** | slider | [1, 15] | 1 | **NUEVO:** Cantidad de períodos (incluyendo actual) que los auditores pueden revisar retrospectivamente. Con `institutional-memory = 1` y `audit-noise = 0` el comportamiento es **idéntico** al modelo original (validado con misma seed: 42, 7, 100). |
 | **`audit-noise`** | slider | [0, 0.5] | 0.0 | **NUEVO:** Factor de ruido que reduce la probabilidad de detección en períodos pasados. La reducción es `audit-noise × period-offset`, donde `period-offset` es la distancia al presente. Con `audit-noise = 0` no hay degradación. |
 | **`seed-fraud?`** | switch | ON/OFF | OFF | **NUEVO (2026-10-14):** Paciente cero para observar contagio. Con ON, al inicio del 2do tick (`ticks = 1`, antes de la captura de historial y la auditoría) un contribuyente aleatorio pasa a evasión total (`pct-income-report = 0`, `income-reported = 0`). Con OFF no se ejecuta nada (ni RNG), por lo que la equivalencia con el original se mantiene. Ningún experimento BehaviorSpace lo fija: heredan OFF. |
+| **`visual-audit-heat?`** | switch | ON/OFF | OFF | **NUEVO (2026-10-22, solo display):** Mapa de calor de focalización. Cada contribuyente acumula `audit-heat` (+1 por auditoría efectiva) y se colorea `scale-color red audit-heat 0 20` (blanco→rojo). Con `strategic` unos pocos se ponen rojos (re-auditoría concentrada); con `random` el calor se reparte. `setup` lo reinicia. Con OFF no cambia nada (ni RNG): equivalencia intacta. |
 
 ---
 

@@ -131,7 +131,7 @@ to tax-payers-adjust-pct-inc-rep
     ]
 
     set pct-income-report ifelse-value pct-income-report > 1 [1] [pct-income-report]
-    ; FIXBOOKS (2026-10-22): libros vivos — el reporte contable sigue al reporte
+    ; FIX: libros vivos — el reporte contable sigue al reporte
     ; conductual cada tick. Sin esto income-reported quedaba congelado en setup.
     set income-reported pct-income-report * income
     ;set audit? false

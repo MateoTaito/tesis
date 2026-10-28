@@ -64,13 +64,31 @@ dispersos que convergen (std en baja a 0.04); PF5 = despegues tan dispersos que 
 coexisten regímenes — indistinguible entre biestabilidad y transitorio ultra-lento
 sin 100k+ ticks. Varias runs PF5 aún subiendo a 50k (+0.04/ktick máx).
 
+## Tercer modelo: libros vivos (22 oct, réplica N=10 completa)
+
+`ABM_TESIS_FIXBOOKS.nlogo` (tesis + `income-reported = pir × income` cada tick;
+diff de 3 líneas) × mismo PhaseTransition (160 runs, 89 min, md5 idéntico
+antes/después). Hallazgos (`Exp_fixbooks/ANALISIS_FIXBOOKS.md`):
+- Niveles suben casi en todas partes (+0.02…+0.12); varianzas colapsan (std ≤0.009
+  en 15/16 celdas). La disuasión genuina premia exactamente al cumplidor total.
+- Firma pre-registrada confirmada con el control correcto: r(det, evasión)
+  intra-tasa vivos +0.38/+0.25/+0.18/+0.14 vs congelados ~0/negativo
+  (el r global era una trampa: confundido por volumen).
+- Biestabilidad sobrevive y se afina: escape PF1 desaparece (10/10 ≥0.995 —
+  era artefacto); PF5 0.02 pasa de continuo uniforme a **dos clusters**
+  (6× 0.27–0.38 + 4× 0.85–0.98): indeterminación → biestabilidad genuina.
+- Replica: dominancia strategic PF1, peor celda PF5 0.02, linealidad random.
+  No replica: niveles, varianzas, forma de la dispersión.
+  El fenómeno central es robusto al fix; los niveles, no.
+
 ## Caveats y pendientes
 
-- ~~N=3 sin potencia en la zona biestable~~ **Resuelto parcial 15 oct**: extensión
-  pre-registrada a N=10 (tanda 2: 112 runs, 59 min; modelo md5 idéntico; merge con
-  procedencia en `MERGE_N10.txt`). PF5 0.02 ahora significativo (p=0.0032);
-  distribuciones: strategic PF1 0.02 → 9/10 techo + 1/10 en 0.747; strategic PF5 0.02 →
-  dispersión total 0.27–0.94 sin clusters. El N≥30 sigue pendiente, focalizado en 0.015–0.035.
+- ~~N=3 sin potencia~~ N=10 + **confirmatorio N=30 (600 runs, FixBooks,
+  `Exp_confirmacion/`)**: dip+Holm inconcluso por artefactos de outliers en celdas
+  techo (se reporta); GMM 2 cuencas (0.45/0.90) + Levene (PF5-0.02 sd 0.245 vs
+  ≤0.017, p<0.0001) + distribuciones afirman biestabilidad localizada en
+  strategic PF5 0.02, con colapso uniforme en 0.015 y techo en ≥0.025.
+  PF1 muestra el mismo fenómeno desplazado (dispersa en 0.015, escape raro en 0.02).
 - Ventana de medición 30k–50k en vez de valor final; falta ANOVA factorial.
 - Historia a contar en la tesis: 10k transitorio → 50k biestable/convergente (régimen +
   histéresis, no umbral nítido en medias). Implicancia de política falsable: bajo

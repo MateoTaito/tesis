@@ -8,7 +8,7 @@ globals [max-pop-size  global-audit-perc-eff PIAR_10000 PRA_10000 acum_frauds_de
 ]
 breed [tax-payers tax-payer]
 breed [auditors auditor]
-tax-payers-own [ pct-income-report income audit? income-reported after-tax-income risk-aversion fraud-detected? fiscal-risk-score fraud-detect-hist under_rep_income income-history audited-periods evasion-streak]
+tax-payers-own [ pct-income-report income audit? income-reported after-tax-income risk-aversion fraud-detected? fiscal-risk-score fraud-detect-hist under_rep_income income-history audited-periods evasion-streak audit-heat]
 auditors-own [pct-audit-efficiency selected-txp-audit nr-audits cumulative-nr-audits cumulative-nr-audits-OK]
 
 to prueba
@@ -132,7 +132,10 @@ to tax-payers-adjust-pct-inc-rep
 
     set pct-income-report ifelse-value pct-income-report > 1 [1] [pct-income-report]
     ;set audit? false
-    ifelse visual-fraud-spread? [ update-fraud-spread-color ] [ set color color-perc-inc-rep pct-income-report ]
+    ; mapa de calor de focalización (solo display; domina sobre vista de contagio)
+    ifelse visual-audit-heat?
+    [ set color scale-color red audit-heat 0 20 ]
+    [ ifelse visual-fraud-spread? [ update-fraud-spread-color ] [ set color color-perc-inc-rep pct-income-report ] ]
   ]
 
   ask tax-payers [set audit? false set fraud-detected? false] ; para reinicializar
@@ -343,6 +346,8 @@ to make-audit
       if any-audit-happened
       [
         ask x [
+          ; mapa de calor de focalización: cuenta auditorías efectivas (sin RNG)
+          set audit-heat audit-heat + 1
           ifelse detected-any-fraud
           [
             let inc-w-penalty ( (1 - tax-rate) * income - total-penalty )
@@ -470,9 +475,11 @@ to setup-tax-payers [ntp]
     set income log-normal-x 16 7
     ; color inicial coherente con vista de contagio (sin consumir aleatoriedad extra)
     set evasion-streak 0
-    ifelse visual-fraud-spread?
-    [ ifelse pct-income-report >= 0.9 [ set color green ] [ set evasion-streak 1 set color orange ] ]
-    [ set color color-perc-inc-rep pct-income-report ]
+    ifelse visual-audit-heat?
+    [ set color scale-color red 0 0 20 ]
+    [ ifelse visual-fraud-spread?
+      [ ifelse pct-income-report >= 0.9 [ set color green ] [ set evasion-streak 1 set color orange ] ]
+      [ set color color-perc-inc-rep pct-income-report ] ]
     set income-reported pct-income-report * income
     set after-tax-income income - income-reported *  tax-rate ;
      ; set risk-aversion initial-risk-aversion ; mejor sería función del pct-income-report: menor pct => menor av. riesgo: set risk-aversion U(.5 * pct-income-report,  pct-income-report)
@@ -483,6 +490,8 @@ to setup-tax-payers [ntp]
       ; inicializar historial de ingresos y períodos auditados para memoria institucional
       set income-history []
       set audited-periods []
+      ; contador visual de re-auditorías (solo display, ver visual-audit-heat?)
+      set audit-heat 0
   ]
   ]
 
@@ -938,6 +947,27 @@ TEXTBOX
 229
 870
 ON=al 2do tick un contribuyente evade todo (PIR 0) para observar el contagio
+11
+0.0
+0
+
+SWITCH
+40
+877
+229
+910
+visual-audit-heat?
+visual-audit-heat?
+0
+1
+-1000
+
+TEXTBOX
+40
+912
+229
+972
+blanco=nunca auditado → rojo=20+ auditorías (muestra la re-auditoría del targeting)
 11
 0.0
 0

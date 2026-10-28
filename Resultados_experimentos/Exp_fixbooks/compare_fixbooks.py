@@ -84,7 +84,8 @@ for ax, (tag, df) in zip(axes, [('congelados', old), ('vivos', new)]):
         d = df[df.strat == s]
         ax.scatter(1 - d[PIR], d['det'], label=s, color=co, alpha=0.6, s=40)
     r = df['det'].corr(1 - df[PIR])
-    ax.set_title(f'{tag}: r={r:+.2f}', fontsize=13, fontweight='bold')
+    ax.set_title(f'{tag} (bandas = tasa; r global confundido por volumen)',
+                  fontsize=12, fontweight='bold')
     ax.set_xlabel('Evasión (1 - PIR final)', fontsize=12, fontweight='bold')
     ax.grid(True, alpha=0.3)
     ax.legend(fontsize=10)
